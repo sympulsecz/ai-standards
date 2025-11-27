@@ -7,6 +7,7 @@ Integrating AI into CI/CD pipelines can improve code quality and developer exper
 ### Pre-Commit / Local Development
 
 AI assistance before code enters the pipeline:
+
 - Code suggestions and completions
 - Local AI-assisted review
 - Commit message generation
@@ -19,6 +20,7 @@ AI assistance before code enters the pipeline:
 ### Pull Request / Merge Request
 
 AI assistance during code review:
+
 - Automated review comments
 - Documentation checks
 - Security scanning with AI analysis
@@ -32,6 +34,7 @@ AI assistance during code review:
 ### Post-Merge / Continuous Integration
 
 AI assistance after code is accepted:
+
 - Release notes generation
 - Changelog compilation
 - Documentation updates

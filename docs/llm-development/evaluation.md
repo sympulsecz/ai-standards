@@ -5,6 +5,7 @@ Evaluating AI systems is different from traditional testing. Outputs are variabl
 ## Why Evaluation Matters
 
 Without systematic evaluation:
+
 - You don't know if changes improve or degrade quality
 - Problems reach users before you notice them
 - Optimization is guesswork
@@ -95,6 +96,7 @@ test_case = {
 ### Collecting Test Cases
 
 Sources for test cases:
+
 - Real user queries (anonymized)
 - Generated examples
 - Expert-created cases
@@ -104,6 +106,7 @@ Sources for test cases:
 ### Maintaining Test Sets
 
 Test sets need maintenance:
+
 - Add cases for new failure modes
 - Remove outdated cases
 - Balance across categories

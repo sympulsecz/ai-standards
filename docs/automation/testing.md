@@ -7,6 +7,7 @@ AI can assist with test creation, maintenance, and analysis. Understanding its s
 ### Test Generation
 
 AI can generate tests from:
+
 - Function signatures and docstrings
 - Existing code patterns
 - Specifications or requirements
@@ -27,6 +28,7 @@ AI can generate tests from:
 ### Test Analysis
 
 AI can analyze test results to:
+
 - Summarize failures
 - Suggest causes
 - Identify patterns
@@ -35,6 +37,7 @@ AI can analyze test results to:
 ### Test Maintenance
 
 AI can help maintain tests by:
+
 - Updating tests when code changes
 - Identifying obsolete tests
 - Suggesting refactoring
@@ -152,6 +155,7 @@ Add tests for:
 ### 4. Integrate into Suite
 
 Ensure generated tests:
+
 - Follow project conventions
 - Use existing fixtures
 - Don't duplicate existing tests
@@ -201,6 +205,7 @@ def test_add_1_plus_3(): assert add(1, 3) == 4
 ### Missing Context
 
 AI doesn't know:
+
 - Your system's invariants
 - Business rules not in code
 - External dependencies' behavior
@@ -283,6 +288,7 @@ Generate tests that work in this environment.
 ### Human Review is Required
 
 Always review AI-generated tests:
+
 - Are they testing the right things?
 - Are assertions correct?
 - Will they catch real bugs?
@@ -290,6 +296,7 @@ Always review AI-generated tests:
 ### Start Small
 
 Don't generate all tests at once:
+
 - Start with one module
 - Review thoroughly
 - Learn what works
@@ -298,6 +305,7 @@ Don't generate all tests at once:
 ### Iterate on Prompts
 
 Improve test quality by improving prompts:
+
 - Add context about coding standards
 - Include examples of good tests
 - Specify what to focus on
@@ -305,6 +313,7 @@ Improve test quality by improving prompts:
 ### Track Quality
 
 Monitor AI-generated test effectiveness:
+
 - Do they catch real bugs?
 - How often do they need manual fixes?
 - Are they maintainable?

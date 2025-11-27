@@ -23,31 +23,31 @@ Think of it as a universal adapter between AI assistants and the tools they need
 Without standardization, every AI integration requires custom code:
 
 ```
-┌─────────────┐     Custom     ┌─────────────┐
-│   AI App    │◄──────────────►│  Database   │
-└─────────────┘    Protocol    └─────────────┘
+┌─────────────┐     Custom      ┌─────────────┐
+│   AI App    │◄───────────────►│  Database   │
+└─────────────┘    Protocol     └─────────────┘
        │
-       │           Custom     ┌─────────────┐
-       └──────────────────────►│    API      │
-                  Protocol    └─────────────┘
+       │            Custom      ┌─────────────┐
+       └───────────────────────►│    API      │
+                   Protocol     └─────────────┘
 ```
 
 With MCP, integrations use a common protocol:
 
 ```
-┌─────────────┐                ┌─────────────┐
-│   AI App    │                │  Database   │
-│  (Client)   │◄───────┐      │  (Server)   │
-└─────────────┘        │      └─────────────┘
-                       │              ▲
-                      MCP             │
-                    Protocol    ┌─────┴─────┐
-                       │        │    API    │
-                       │        │  (Server) │
-                       ▼        └───────────┘
-               ┌───────────────┐
-               │  Any Server   │
-               └───────────────┘
+┌─────────────┐                 ┌─────────────┐
+│   AI App    │                 │  Database   │
+│  (Client)   │◄────────┐       │  (Server)   │
+└─────────────┘         │       └─────────────┘
+                        │               ▲
+                       MCP              │
+                     Protocol     ┌─────┴─────┐
+                        │         │    API    │
+                        │         │  (Server) │
+                        ▼         └───────────┘
+                ┌───────────────┐
+                │  Any Server   │
+                └───────────────┘
 ```
 
 ### Key Benefits

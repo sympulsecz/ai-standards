@@ -21,6 +21,7 @@ response = client.chat.completions.create(
 ```
 
 Key parameters:
+
 - **model**: Which model to use
 - **messages**: Conversation history
 - **temperature**: Randomness (0 = deterministic, 1+ = creative)
@@ -46,6 +47,7 @@ Style:
 ```
 
 **Best practices:**
+
 - Define the role clearly
 - Specify constraints and style
 - Include examples of desired behavior
@@ -75,6 +77,7 @@ system_prompt = """Respond with JSON in this format:
 ```
 
 **Best practices:**
+
 - Validate output against expected schema
 - Have fallback for malformed responses
 - Include examples in prompt for complex formats
@@ -151,6 +154,7 @@ response = client.chat.completions.create(
 ```
 
 Consider:
+
 - Shorter timeouts for interactive use
 - Longer timeouts for batch processing
 - Timeout per token for streaming
@@ -185,11 +189,13 @@ for chunk in stream:
 ```
 
 Benefits:
+
 - Better perceived latency
 - Can show progress
 - Can cancel early if response is wrong
 
 Considerations:
+
 - More complex error handling
 - Need to reassemble full response
 - May need different parsing approach
@@ -212,15 +218,18 @@ print(f"Total: {usage.total_tokens}")
 ### Cost Reduction Strategies
 
 **Prompt optimization:**
+
 - Remove unnecessary context
 - Use concise instructions
 - Avoid repetition
 
 **Model selection:**
+
 - Use smaller models when appropriate
 - Reserve large models for complex tasks
 
 **Caching:**
+
 ```python
 def get_completion(prompt):
     cache_key = hash(prompt)
@@ -233,6 +242,7 @@ def get_completion(prompt):
 ```
 
 **Batching:**
+
 - Process multiple items in one request
 - Reduces per-request overhead
 
@@ -288,6 +298,7 @@ def call_llm(messages, **kwargs):
 ### Metrics
 
 Track operational metrics:
+
 - Request latency (p50, p95, p99)
 - Error rate by type
 - Token usage over time
@@ -296,6 +307,7 @@ Track operational metrics:
 ### Tracing
 
 For complex pipelines, use distributed tracing:
+
 - Trace ID across LLM calls
 - Parent-child relationships
 - Timing for each step
@@ -322,6 +334,7 @@ class AnthropicClient(LLMClient):
 ```
 
 Benefits:
+
 - Switch providers easily
 - A/B test different models
 - Fallback between providers
@@ -334,4 +347,3 @@ Benefits:
 - Monitor costs and set budget limits
 - Log thoroughly for debugging
 - Abstract providers for flexibility
-

@@ -53,6 +53,7 @@ This is an internal documentation site teaching developers best practices for wo
 - Use code blocks with language hints
 - Keep paragraphs focused and concise
 - Use lists for scannable information
+- Always add a blank line before and after lists
 
 ## File Structure Conventions
 

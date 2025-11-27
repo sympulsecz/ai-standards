@@ -9,15 +9,16 @@ Understanding where data flows when using AI systems is critical for security an
 When you use AI APIs, data is transmitted:
 
 ```
-Your System                         AI Provider
-    │                                    │
-    │──── Prompt (includes context) ────►│
-    │                                    │
-    │◄─── Response ─────────────────────│
-    │                                    │
+Your System                              AI Provider
+     │                                        │
+     │──── Prompt (includes context) ────────►│
+     │                                        │
+     │◄─── Response ─────────────────────────│
+     │                                        │
 ```
 
 The prompt may include:
+
 - User input
 - Code or documents for analysis
 - Database records
@@ -179,6 +180,7 @@ AI API keys are credentials that need protection:
 ### Rotation
 
 Rotate API keys regularly:
+
 - After any potential exposure
 - On employee offboarding
 - On a regular schedule
@@ -186,6 +188,7 @@ Rotate API keys regularly:
 ### Scoping
 
 Use least-privilege keys when available:
+
 - Read-only vs. full access
 - Rate limits per key
 - Usage tracking per key
@@ -195,6 +198,7 @@ Use least-privilege keys when available:
 ### GDPR
 
 If processing EU personal data:
+
 - Legal basis for processing with AI
 - Data subject rights (deletion, access)
 - Data transfer mechanisms
@@ -203,6 +207,7 @@ If processing EU personal data:
 ### HIPAA
 
 If processing health data:
+
 - Business Associate Agreements with providers
 - Minimum necessary rule
 - Audit logging
@@ -211,6 +216,7 @@ If processing health data:
 ### SOC 2
 
 If you need SOC 2 compliance:
+
 - Document AI data flows
 - Provider security assessments
 - Access controls
@@ -219,6 +225,7 @@ If you need SOC 2 compliance:
 ### Industry-Specific
 
 Your industry may have additional requirements:
+
 - Financial services regulations
 - Government data handling
 - Education privacy laws
@@ -246,6 +253,7 @@ Your industry may have additional requirements:
 ### When in Doubt
 
 If you're unsure whether data should be used with AI:
+
 - Consult security/compliance team
 - Default to more restrictive handling
 - Document the decision

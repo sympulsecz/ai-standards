@@ -60,6 +60,7 @@ search_documents:
 ```
 
 **Best practices:**
+
 - Return structured data
 - Include relevance/confidence indicators
 - Paginate large results
@@ -85,6 +86,7 @@ create_ticket:
 ```
 
 **Best practices:**
+
 - Validate inputs thoroughly
 - Return confirmation of action taken
 - Include references/links to created items
@@ -110,6 +112,7 @@ analyze_and_report:
 ```
 
 **Best practices:**
+
 - Document what operations are combined
 - Consider if granular tools would be better
 - Provide progress updates for long operations
@@ -199,6 +202,7 @@ System errors (5xx equivalent):
 ```
 
 Include:
+
 - Error code for programmatic handling
 - Human-readable message
 - Actionable details when possible
@@ -223,16 +227,19 @@ Avoid:
 ### Static vs. Dynamic Resources
 
 **Static resources** (content rarely changes):
+
 - Configuration files
 - Reference documentation
 - Schema definitions
 
 **Dynamic resources** (content changes frequently):
+
 - Live data
 - Status information
 - Generated content
 
 For dynamic resources, consider:
+
 - Caching strategies
 - Freshness indicators
 - Subscription/notification patterns
@@ -368,6 +375,7 @@ async def test_tool_execution():
 ### Manual Testing
 
 Test with actual AI clients:
+
 1. Connect your server to an AI assistant
 2. Try various queries and edge cases
 3. Verify responses are useful and accurate
@@ -382,4 +390,3 @@ Test with actual AI clients:
 - Consider performance and caching
 - Follow security best practices
 - Test at unit, integration, and user experience levels
-

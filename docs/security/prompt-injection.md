@@ -5,6 +5,7 @@ Prompt injection is a class of attacks where malicious inputs manipulate AI beha
 ## What is Prompt Injection?
 
 AI systems follow instructions embedded in prompts. Attackers can craft inputs that:
+
 - Override original instructions
 - Extract sensitive information
 - Cause unintended actions
@@ -21,6 +22,7 @@ AI response: [may reveal instructions despite being told not to]
 ```
 
 The attack works because the AI can't reliably distinguish between:
+
 - Instructions it should follow (from developers)
 - Instructions it should process as data (from users)
 
@@ -217,6 +219,7 @@ def analyze_for_injection(user_input, ai_response):
 ### Behavioral Monitoring
 
 Track for unusual patterns:
+
 - Sudden changes in AI response style
 - Responses that don't match the task
 - Attempts to access unusual resources
@@ -226,6 +229,7 @@ Track for unusual patterns:
 ### Red Teaming
 
 Actively try to break your system:
+
 - Common injection phrases
 - Roleplay scenarios
 - Encoded attacks

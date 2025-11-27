@@ -31,6 +31,7 @@ Each layer has unique security considerations.
 ### Data Exposure
 
 AI systems process data that may be sensitive:
+
 - User inputs
 - Proprietary code
 - Business data
@@ -41,6 +42,7 @@ Risk: Data sent to AI services may be logged, used for training, or exposed.
 ### Prompt Injection
 
 Malicious inputs can manipulate AI behavior:
+
 - Override instructions
 - Extract sensitive information
 - Cause unintended actions
@@ -50,6 +52,7 @@ Risk: Users can craft inputs that make the AI do things you didn't intend.
 ### Output Manipulation
 
 AI outputs may contain harmful content:
+
 - Misinformation
 - Malicious code
 - Social engineering attempts
@@ -59,6 +62,7 @@ Risk: AI-generated content may harm users or your systems.
 ### Availability Attacks
 
 AI systems can be attacked to deny service:
+
 - Token exhaustion
 - Compute exhaustion
 - Rate limit abuse
@@ -80,6 +84,7 @@ If one layer fails, others should catch the problem.
 ### Least Privilege
 
 AI components should have minimal access:
+
 - Only the data they need
 - Only the actions they require
 - Only the systems necessary
@@ -87,6 +92,7 @@ AI components should have minimal access:
 ### Assume Breach
 
 Design assuming attackers will succeed at some point:
+
 - Limit blast radius
 - Enable detection
 - Prepare response plans

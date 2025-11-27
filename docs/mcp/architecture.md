@@ -24,16 +24,19 @@ MCP uses a layered architecture:
 MCP supports multiple transport mechanisms:
 
 **stdio**: Communication via standard input/output
+
 - Simple, works locally
 - Server runs as a subprocess
 - Common for local tools
 
 **HTTP with SSE**: HTTP requests with Server-Sent Events for responses
+
 - Works over networks
 - Supports long-running operations
 - Good for remote servers
 
 **WebSocket**: Bidirectional communication
+
 - Full duplex
 - Lower latency
 - Suitable for real-time applications
@@ -107,6 +110,7 @@ Resource:
 ```
 
 Resources can be:
+
 - **Static**: Fixed content
 - **Dynamic**: Generated on request
 - **Templated**: URI patterns with parameters
@@ -124,6 +128,7 @@ Prompt:
 ```
 
 Useful for:
+
 - Standardizing common tasks
 - Ensuring consistent approach
 - Sharing best practices
@@ -140,30 +145,30 @@ Useful for:
 ### Capability Discovery
 
 ```
-Client                              Server
-   │                                   │
-   │──── initialize ─────────────────►│
-   │◄─── capabilities ────────────────│
-   │                                   │
-   │──── tools/list ─────────────────►│
-   │◄─── available tools ─────────────│
-   │                                   │
-   │──── resources/list ─────────────►│
-   │◄─── available resources ─────────│
+Client                                   Server
+  │                                        │
+  │──── initialize ───────────────────────►│
+  │◄─── capabilities ─────────────────────│
+  │                                        │
+  │──── tools/list ───────────────────────►│
+  │◄─── available tools ──────────────────│
+  │                                        │
+  │──── resources/list ───────────────────►│
+  │◄─── available resources ──────────────│
 ```
 
 ### Request Handling
 
 ```
-Client                              Server
-   │                                   │
-   │──── tools/call ─────────────────►│
-   │     (name, arguments)             │
-   │                                   │
-   │                          Execute tool
-   │                                   │
-   │◄─── result ──────────────────────│
-   │     (content)                     │
+Client                                   Server
+  │                                        │
+  │──── tools/call ───────────────────────►│
+  │     (name, arguments)                  │
+  │                                        │
+  │                               Execute tool
+  │                                        │
+  │◄─── result ───────────────────────────│
+  │     (content)                          │
 ```
 
 ## Security Model
@@ -173,6 +178,7 @@ MCP provides security through boundaries:
 ### Capability Restriction
 
 Servers only expose what they're designed to expose. The client cannot:
+
 - Access files not exposed as resources
 - Call functions not defined as tools
 - Bypass the defined interfaces
@@ -180,6 +186,7 @@ Servers only expose what they're designed to expose. The client cannot:
 ### Input Validation
 
 Servers validate all inputs against schemas:
+
 - Type checking
 - Range validation
 - Required fields
@@ -188,6 +195,7 @@ Servers validate all inputs against schemas:
 ### Sandboxing
 
 Servers run as separate processes:
+
 - Crashes don't affect the client
 - Resource limits can be applied
 - Permissions can be restricted
@@ -214,6 +222,7 @@ MCP defines standard error responses:
 ```
 
 Standard error codes:
+
 - `-32700`: Parse error
 - `-32600`: Invalid request
 - `-32601`: Method not found
@@ -225,6 +234,7 @@ Standard error codes:
 ### Single-Purpose Servers
 
 One server, one job:
+
 ```
 ┌─────────────┐
 │  Database   │──► SQL queries only
@@ -237,6 +247,7 @@ Benefits: Simple, focused, easy to maintain
 ### Composite Servers
 
 Multiple capabilities in one server:
+
 ```
 ┌─────────────────┐
 │   DevTools      │──► File operations
@@ -250,6 +261,7 @@ Benefits: Related capabilities together, fewer connections
 ### Gateway Pattern
 
 One server aggregates others:
+
 ```
 ┌───────────┐     ┌───────────┐
 │  Client   │────►│  Gateway  │────►│ Server A │
@@ -266,4 +278,3 @@ Benefits: Single connection point, unified access control
 - Security comes from boundaries and validation
 - Error handling follows JSON-RPC conventions
 - Choose architecture patterns based on your needs
-

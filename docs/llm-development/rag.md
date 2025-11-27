@@ -5,12 +5,14 @@ RAG enhances LLM responses by retrieving relevant information and including it i
 ## Why RAG?
 
 LLMs have limitations:
+
 - Knowledge cutoff (don't know recent information)
 - No access to private data
 - Can hallucinate facts
 - Limited context window
 
 RAG addresses these by:
+
 - Providing current information
 - Grounding responses in actual data
 - Reducing hallucination
@@ -290,6 +292,7 @@ Considerations:
 ### Maintenance
 
 RAG systems require ongoing maintenance:
+
 - Reindex when sources change
 - Monitor retrieval quality
 - Update embeddings when models improve

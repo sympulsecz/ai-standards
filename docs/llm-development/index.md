@@ -41,6 +41,7 @@ Think of the LLM as a powerful but unpredictable component:
 ```
 
 Your code controls:
+
 - What context the LLM receives
 - How the prompt is constructed
 - How the output is processed and validated
@@ -48,6 +49,7 @@ Your code controls:
 ### Prompt as Code
 
 Prompts are code—they should be:
+
 - Version controlled
 - Tested
 - Reviewed
@@ -84,6 +86,7 @@ Approach: Accept variety    │          Approach: Constrain outputs
 ### Simple Completion
 
 Single request, single response:
+
 - Summarization
 - Translation
 - Simple Q&A
@@ -91,6 +94,7 @@ Single request, single response:
 ### Chain of Operations
 
 Multiple LLM calls in sequence:
+
 - Each step's output feeds next step's input
 - Allows complex reasoning
 - Increases latency and cost
@@ -98,6 +102,7 @@ Multiple LLM calls in sequence:
 ### Retrieval-Augmented Generation (RAG)
 
 Enhance LLM with relevant information:
+
 - Retrieve relevant documents
 - Include in context
 - Generate informed response
@@ -107,6 +112,7 @@ Covered in detail in [RAG](rag.md).
 ### Structured Output
 
 Constrain outputs to specific formats:
+
 - JSON schemas
 - Classification categories
 - Extraction patterns
@@ -118,6 +124,7 @@ Reduces hallucination, enables reliable parsing.
 ### 1. Define the Task Clearly
 
 Before writing code:
+
 - What should the LLM do?
 - What does success look like?
 - What does failure look like?
@@ -126,6 +133,7 @@ Before writing code:
 ### 2. Start with Prompts
 
 Iterate on prompts before building infrastructure:
+
 - Use playground/chat interfaces
 - Try various inputs
 - Identify failure modes
@@ -134,6 +142,7 @@ Iterate on prompts before building infrastructure:
 ### 3. Build the Pipeline
 
 Once prompts work:
+
 - Implement API integration
 - Add input/output processing
 - Handle errors
@@ -142,6 +151,7 @@ Once prompts work:
 ### 4. Evaluate Systematically
 
 Measure quality:
+
 - Build test cases
 - Define success criteria
 - Run evaluations
@@ -152,6 +162,7 @@ Covered in detail in [Evaluation](evaluation.md).
 ### 5. Iterate and Improve
 
 Based on evaluation results:
+
 - Refine prompts
 - Adjust processing
 - Add guardrails
