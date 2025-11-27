@@ -13,6 +13,7 @@ AI assistance before code enters the pipeline:
 - Commit message generation
 
 **Characteristics:**
+
 - Interactive, developer-driven
 - Low risk (no impact on shared systems)
 - Immediate feedback
@@ -27,6 +28,7 @@ AI assistance during code review:
 - Suggested improvements
 
 **Characteristics:**
+
 - Advisory (human makes final decision)
 - Visible to team
 - Can block merge if critical issues found
@@ -41,6 +43,7 @@ AI assistance after code is accepted:
 - Metric analysis
 
 **Characteristics:**
+
 - Lower stakes (code already reviewed)
 - Can be regenerated if wrong
 - Enhances artifacts, doesn't gate them
@@ -281,4 +284,3 @@ Before adding AI to CI/CD:
 - Monitor accuracy and adjust over time
 - Consider cost and data exposure
 - Keep humans in the loop for important decisions
-

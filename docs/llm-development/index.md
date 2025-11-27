@@ -29,14 +29,14 @@ Think of the LLM as a powerful but unpredictable component:
 
 ```
 ┌─────────────────────────────────────────────────┐
-│               Your Application                   │
+│               Your Application                  │
 ├─────────────────────────────────────────────────┤
 │  Input         ┌─────────┐         Output       │
 │  Processing ──►│   LLM   │──► Output Processing │
-│                └─────────┘                       │
-│                     ▲                            │
-│                     │                            │
-│               Context/Prompt                     │
+│                └─────────┘                      │
+│                     ▲                           │
+│                     │                           │
+│               Context/Prompt                    │
 └─────────────────────────────────────────────────┘
 ```
 
@@ -75,8 +75,8 @@ Low Reliability OK          │          High Reliability Required
 (creative, exploratory)     │          (critical, customer-facing)
                             │
 Creative writing            │          Customer support responses
-Brainstorming              │          Data extraction
-Exploration                │          Classification decisions
+Brainstorming               │          Data extraction
+Exploration                 │          Classification decisions
                             │
 Approach: Accept variety    │          Approach: Constrain outputs
 ```
@@ -173,4 +173,3 @@ Based on evaluation results:
 - [API Patterns](api-patterns.md) - Reliable LLM API integration
 - [RAG](rag.md) - Retrieval-Augmented Generation
 - [Evaluation](evaluation.md) - Measuring AI feature quality
-

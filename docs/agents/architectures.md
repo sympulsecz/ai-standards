@@ -9,9 +9,9 @@ At its core, every agent follows a variation of this loop:
 ```
 ┌──────────────────────────────────────────────────────┐
 │                                                      │
-│   Observe → Reason → Act → Observe (new state) ─┐   │
-│      ▲                                          │   │
-│      └──────────────────────────────────────────┘   │
+│   Observe → Reason → Act → Observe (new state) ─┐    │
+│      ▲                                          │    │
+│      └──────────────────────────────────────────┘    │
 │                                                      │
 └──────────────────────────────────────────────────────┘
 ```
@@ -167,7 +167,7 @@ Multiple agents with different perspectives:
 ```
 ┌──────────────────────────────────────────┐
 │                                          │
-│  Proposer ◄──────────► Critic           │
+│  Proposer ◄──────────► Critic            │
 │     │                     │              │
 │     └────────┬────────────┘              │
 │              ▼                           │

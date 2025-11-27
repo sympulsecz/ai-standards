@@ -23,7 +23,7 @@ RAG addresses these by:
 ```
 ┌──────────────────────────────────────────────────────────────────┐
 │                                                                  │
-│  Query ──► Retrieval ──► Context Assembly ──► LLM ──► Response  │
+│  Query ──► Retrieval ──► Context Assembly ──► LLM ──► Response   │
 │               │                  │                               │
 │               ▼                  │                               │
 │         ┌─────────┐              │                               │
@@ -69,6 +69,7 @@ Source Documents
 How you split documents affects retrieval quality:
 
 **Fixed-size chunks:**
+
 ```
 Split every N characters/tokens
 Simple, predictable
@@ -76,6 +77,7 @@ May split mid-sentence or mid-concept
 ```
 
 **Semantic chunks:**
+
 ```
 Split at natural boundaries (paragraphs, sections)
 Preserves meaning
@@ -83,6 +85,7 @@ Variable sizes
 ```
 
 **Overlapping chunks:**
+
 ```
 Chunks overlap by some percentage
 Helps with context at boundaries
@@ -90,6 +93,7 @@ Increases storage
 ```
 
 **Hierarchical chunks:**
+
 ```
 Multiple levels (document → section → paragraph)
 Enables different granularity retrieval
@@ -99,7 +103,7 @@ More complex implementation
 !!! tip "Chunk Size Trade-off"
     - **Smaller chunks**: More precise retrieval, but may miss context
     - **Larger chunks**: More context, but may include irrelevant information
-    
+
     Start with 200-500 tokens and adjust based on results.
 
 ### Embeddings
@@ -114,6 +118,7 @@ embedding = embedding_model.encode(text)
 ```
 
 **Considerations:**
+
 - Match embedding model to your content type
 - Same model for indexing and querying
 - Consider multilingual needs
@@ -123,11 +128,13 @@ embedding = embedding_model.encode(text)
 Store embeddings for efficient retrieval:
 
 **Options range from:**
+
 - Simple in-memory (development)
 - Dedicated vector databases (production)
 - Extensions to existing databases
 
 **Key operations:**
+
 - Insert embeddings
 - Similarity search (nearest neighbors)
 - Filtered search (similarity + metadata)
@@ -229,11 +236,13 @@ Query → Agent decides:
 The most important factor. Bad retrieval = bad responses.
 
 **Measure:**
+
 - Are relevant documents being retrieved?
 - Are irrelevant documents being filtered out?
 - Is the ranking correct?
 
 **Improve:**
+
 - Better chunking strategy
 - Query enhancement
 - Hybrid search
@@ -244,11 +253,13 @@ The most important factor. Bad retrieval = bad responses.
 Does the LLM use retrieved context effectively?
 
 **Problems:**
+
 - Ignoring relevant context
 - Over-relying on weak evidence
 - Mixing up information from multiple sources
 
 **Solutions:**
+
 - Clear instructions to use context
 - Source attribution requirements
 - Structured context presentation
@@ -258,6 +269,7 @@ Does the LLM use retrieved context effectively?
 RAG reduces but doesn't eliminate hallucination.
 
 **Strategies:**
+
 - Instruct to only use provided context
 - Ask for source citations
 - Verify claims against context
@@ -317,4 +329,3 @@ Evaluate RAG systems on:
 - Retrieval quality is the foundation—invest here
 - Start simple, add complexity based on evaluation
 - Monitor and maintain the system over time
-

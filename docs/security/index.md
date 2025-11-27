@@ -12,16 +12,16 @@ AI systems introduce new security considerations. Understanding these risks and 
 AI introduces security concerns at multiple levels:
 
 ```
-┌─────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────┐
 │                    Application Layer                     │
 │  Your code, business logic, user interfaces              │
-├─────────────────────────────────────────────────────────┤
+├──────────────────────────────────────────────────────────┤
 │                      AI Layer                            │
 │  Prompts, model interactions, tool calls                 │
-├─────────────────────────────────────────────────────────┤
+├──────────────────────────────────────────────────────────┤
 │                 Infrastructure Layer                     │
 │  APIs, data storage, network, authentication             │
-└─────────────────────────────────────────────────────────┘
+└──────────────────────────────────────────────────────────┘
 ```
 
 Each layer has unique security considerations.
@@ -154,4 +154,3 @@ AI: [attempts unauthorized action]
 
 - [Data Handling](data-handling.md) - Managing data security with AI
 - [Prompt Injection](prompt-injection.md) - Understanding and preventing attacks
-

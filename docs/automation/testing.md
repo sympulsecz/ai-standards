@@ -14,12 +14,14 @@ AI can generate tests from:
 - Example inputs and outputs
 
 **What it does well:**
+
 - Boilerplate test structure
 - Common test cases
 - Edge case suggestions
 - Test data generation
 
 **What it struggles with:**
+
 - Complex business logic validation
 - Integration test scenarios
 - Performance test design
@@ -85,11 +87,13 @@ def calculate_discount(price: float, customer_tier: str) -> float:
 ```
 
 Include tests for:
+
 - Valid inputs for each tier
 - Invalid tier values
 - Negative price
 - Zero price
 - Large price values
+
 ```
 
 ### Property-Based Test Suggestions
@@ -97,11 +101,14 @@ Include tests for:
 AI can suggest properties to test:
 
 ```
+
 For a sorting function, test these properties:
+
 - Output length equals input length
 - All input elements appear in output
 - Output is ordered
 - Sorting twice gives same result
+
 ```
 
 ### Test Data Generation
@@ -109,12 +116,15 @@ For a sorting function, test these properties:
 Generate realistic test data:
 
 ```
+
 Generate 10 test users with:
+
 - Realistic names
 - Valid email formats
 - Various ages (18-80)
 - Different account statuses
 - Edge cases (very long names, special characters)
+
 ```
 
 ## Practical Workflow
@@ -124,10 +134,12 @@ Generate 10 test users with:
 Ask AI to create a first draft:
 
 ```
+
 Generate comprehensive unit tests for the UserService class.
 Focus on the create_user and update_user methods.
 Use pytest conventions.
 Include both success and error cases.
+
 ```
 
 ### 2. Review Generated Tests
@@ -145,11 +157,14 @@ Before using AI-generated tests:
 Iterate on the generated tests:
 
 ```
+
 These tests don't cover the case where the database connection fails.
 Add tests for:
+
 - Database timeout
 - Connection refused
 - Partial write failure
+
 ```
 
 ### 4. Integrate into Suite
@@ -326,4 +341,3 @@ Monitor AI-generated test effectiveness:
 - AI works best for boilerplate and suggestions, not complete test suites
 - Integration tests need more context and guidance
 - Review AI-generated tests as critically as AI-generated code
-

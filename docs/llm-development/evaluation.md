@@ -22,11 +22,13 @@ Test Dataset → System → Outputs → Comparison → Metrics
 ```
 
 **Pros:**
+
 - Controlled, reproducible
 - Can test many cases quickly
 - Catches regressions
 
 **Cons:**
+
 - May not reflect real usage
 - Limited by dataset quality
 - Can be gamed
@@ -40,11 +42,13 @@ Real Traffic → System → User Behavior → Metrics
 ```
 
 **Pros:**
+
 - Real-world performance
 - Catches issues offline evaluation misses
 - Measures actual impact
 
 **Cons:**
+
 - Users experience problems
 - Slower feedback loop
 - Harder to attribute causes
@@ -58,11 +62,13 @@ Outputs → Human Reviewers → Quality Ratings
 ```
 
 **Pros:**
+
 - Captures subjective quality
 - Can assess nuance
 - Ground truth for training automated evals
 
 **Cons:**
+
 - Expensive, slow
 - Requires clear guidelines
 - Inter-rater variability
@@ -166,6 +172,7 @@ Return JSON with ratings and brief explanations.
 ```
 
 **Considerations:**
+
 - Judges can be biased (prefer verbose, prefer their own style)
 - Different judges give different scores
 - Need to calibrate against human judgment
@@ -239,6 +246,7 @@ Version 1.2: Accuracy 81%, Latency 180ms  (-1% accuracy, -65ms latency)
 Many AI outputs have no single correct answer:
 
 **Mitigations:**
+
 - Multiple human raters
 - Clear evaluation criteria
 - Accept range of good answers
@@ -249,6 +257,7 @@ Many AI outputs have no single correct answer:
 Models may have seen your test data during training:
 
 **Mitigations:**
+
 - Use recent, private data
 - Create synthetic test cases
 - Regularly refresh test sets
@@ -259,6 +268,7 @@ Models may have seen your test data during training:
 Optimizing for metrics may not improve real quality:
 
 **Mitigations:**
+
 - Use multiple metrics
 - Include human evaluation
 - Monitor user satisfaction
@@ -269,6 +279,7 @@ Optimizing for metrics may not improve real quality:
 Test sets can't cover everything:
 
 **Mitigations:**
+
 - Stratified sampling across categories
 - Continuous expansion of test sets
 - Production monitoring
@@ -309,4 +320,3 @@ Test sets can't cover everything:
 - Compare against baselines to understand impact
 - Combine offline evaluation with production monitoring
 - Expect subjectivity and design for it
-

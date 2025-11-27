@@ -66,15 +66,15 @@ Unlike SQL injection (where we can use parameterized queries), there's no clear 
 The fundamental problem:
 
 ```
-┌──────────────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────────┐
 │                    LLM Prompt                         │
 │                                                       │
 │  Instructions (from developer)                        │
-│  + User input (from user)                            │
+│  + User input (from user)                             │
 │  + Context (from various sources)                     │
 │                                                       │
-│  = One text stream the AI processes together         │
-└──────────────────────────────────────────────────────┘
+│  = One text stream the AI processes together          │
+└───────────────────────────────────────────────────────┘
 ```
 
 The AI processes everything as one text stream. There's no enforced boundary.
@@ -104,7 +104,8 @@ def validate_input(user_input):
     return user_input
 ```
 
-**Limitations:** 
+**Limitations:**
+
 - Attackers can rephrase to avoid patterns
 - False positives on legitimate inputs
 - Incomplete coverage
@@ -130,6 +131,7 @@ Respond only as defined in the system section."""
 Use clear delimiters and explicit instructions about handling user input.
 
 **Limitations:**
+
 - Models don't always respect boundaries
 - Clever attacks can still work
 
@@ -281,4 +283,3 @@ Complete prevention of prompt injection is currently impossible. The goal is:
 - Monitor for attack attempts
 - Test your systems with known attack patterns
 - Assume injection can succeed; limit the damage
-

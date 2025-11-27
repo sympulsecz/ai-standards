@@ -8,14 +8,14 @@ MCP uses a layered architecture:
 
 ```
 ┌─────────────────────────────────────────────────┐
-│              Application Layer                   │
-│         (Tools, Resources, Prompts)              │
+│              Application Layer                  │
+│         (Tools, Resources, Prompts)             │
 ├─────────────────────────────────────────────────┤
-│              Protocol Layer                      │
-│              (JSON-RPC 2.0)                      │
+│              Protocol Layer                     │
+│              (JSON-RPC 2.0)                     │
 ├─────────────────────────────────────────────────┤
-│              Transport Layer                     │
-│       (stdio, HTTP+SSE, WebSocket)               │
+│              Transport Layer                    │
+│       (stdio, HTTP+SSE, WebSocket)              │
 └─────────────────────────────────────────────────┘
 ```
 
@@ -148,13 +148,13 @@ Useful for:
 Client                                   Server
   │                                        │
   │──── initialize ───────────────────────►│
-  │◄─── capabilities ─────────────────────│
+  │◄─── capabilities ──────────────────────│
   │                                        │
   │──── tools/list ───────────────────────►│
-  │◄─── available tools ──────────────────│
+  │◄─── available tools ───────────────────│
   │                                        │
   │──── resources/list ───────────────────►│
-  │◄─── available resources ──────────────│
+  │◄─── available resources ───────────────│
 ```
 
 ### Request Handling
@@ -167,7 +167,7 @@ Client                                   Server
   │                                        │
   │                               Execute tool
   │                                        │
-  │◄─── result ───────────────────────────│
+  │◄─── result ────────────────────────────│
   │     (content)                          │
 ```
 

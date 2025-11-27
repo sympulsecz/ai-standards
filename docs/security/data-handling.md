@@ -13,7 +13,7 @@ Your System                              AI Provider
      │                                        │
      │──── Prompt (includes context) ────────►│
      │                                        │
-     │◄─── Response ─────────────────────────│
+     │◄─── Response ──────────────────────────│
      │                                        │
 ```
 
@@ -47,21 +47,25 @@ Categorize data before using with AI:
 ### Categories
 
 **Public**
+
 - Already publicly available
 - No restrictions on sharing
 - Safe to use with any AI service
 
 **Internal**
+
 - Not public but not sensitive
 - Business information
 - May use with appropriate provider agreements
 
 **Confidential**
+
 - Sensitive business data
 - Requires protection
 - Use only with strict data agreements or local models
 
 **Restricted**
+
 - Highly sensitive
 - Regulated data (PII, health, financial)
 - Generally should not use with external AI services
@@ -267,4 +271,3 @@ If you're unsure whether data should be used with AI:
 - Protect API keys like passwords
 - Understand compliance requirements
 - Document data flows and decisions
-

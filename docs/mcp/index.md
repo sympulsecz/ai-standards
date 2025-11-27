@@ -104,4 +104,3 @@ MCP might be overkill when:
 
 - [Architecture](architecture.md) - Deeper dive into how MCP works
 - [Building Tools](building-tools.md) - Practical guide to creating MCP servers
-

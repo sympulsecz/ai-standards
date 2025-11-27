@@ -69,7 +69,7 @@ For AI tools to be effective, they need relevant context. Consider:
 
 !!! tip "Maximize Relevant Context"
     Tools that can automatically find and include relevant context tend to produce better results. Look for features like:
-    
+
     - Codebase indexing
     - Semantic search over your code
     - Automatic inclusion of related files
@@ -131,14 +131,13 @@ Many AI tools can be configured per-project:
 - Generated code that adds noise
 - Large files that consume context
 
-!!! example "Example Instruction File Contents"
-    ```
-    - Use TypeScript strict mode
-    - Follow existing patterns in /src/components
-    - Tests go in __tests__ directories
-    - Use named exports, not default exports
-    - Error handling: use Result types, not exceptions
-    ```
+Example Instruction File Contents:
+
+- Use TypeScript strict mode
+- Follow existing patterns in /src/components
+- Tests go in **tests** directories
+- Use named exports, not default exports
+- Error handling: use Result types, not exceptions
 
 ### Personal Configuration
 
@@ -175,4 +174,3 @@ When a new AI tool appears, evaluate it against:
 - Configure tools per-project for better results
 - Share configurations with your team
 - Evaluate new tools against consistent criteria
-
