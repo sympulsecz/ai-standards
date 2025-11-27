@@ -1,0 +1,96 @@
+site_name: AI Standards
+site_description: Best practices and standards for working with AI in software development
+site_url: https://sympulse.github.io/ai-standards/
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+repo_url: https://github.com/sympulse/ai-standards
+repo_name: sympulse/ai-standards
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
+  - tags
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/index.md
+    - Key Concepts: getting-started/key-concepts.md
+    - Tool Setup: getting-started/tool-setup.md
+  - AI-Assisted Development:
+    - ai-assisted-development/index.md
+    - Effective Prompting: ai-assisted-development/effective-prompting.md
+    - Code Review: ai-assisted-development/code-review.md
+    - Debugging: ai-assisted-development/debugging.md
+  - Agents:
+    - agents/index.md
+    - Architectures: agents/architectures.md
+    - Building Agents: agents/building-agents.md
+    - Safety & Guardrails: agents/safety-guardrails.md
+  - Model Context Protocol:
+    - mcp/index.md
+    - Architecture: mcp/architecture.md
+    - Building Tools: mcp/building-tools.md
+  - Automation:
+    - automation/index.md
+    - CI/CD Integration: automation/ci-cd.md
+    - Testing with AI: automation/testing.md
+  - LLM Development:
+    - llm-development/index.md
+    - API Patterns: llm-development/api-patterns.md
+    - RAG: llm-development/rag.md
+    - Evaluation: llm-development/evaluation.md
+  - Security:
+    - security/index.md
+    - Data Handling: security/data-handling.md
+    - Prompt Injection: security/prompt-injection.md
+  - Reference:
+    - Glossary: reference/glossary.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sympulse/ai-standards
+

@@ -1,0 +1,7 @@
+# MkDocs and Material theme
+mkdocs>=1.5
+mkdocs-material>=9.5
+
+# Plugins
+mkdocs-material-extensions>=1.3
+
