@@ -48,4 +48,3 @@ Working with AI is often iterative. Initial outputs may need refinement, and the
 
 1. Start with [Key Concepts](key-concepts.md) to build your foundational vocabulary
 2. Then explore [Tool Setup](tool-setup.md) for environment considerations
-
