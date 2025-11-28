@@ -65,8 +65,7 @@ nav:
   - AI-Assisted Development:
     - ai-assisted-development/index.md
     - Effective Prompting: ai-assisted-development/effective-prompting.md
-    - Code Review: ai-assisted-development/code-review.md
-    - Debugging: ai-assisted-development/debugging.md
+    - Code Inspection: ai-assisted-development/code-inspection.md
   - Agents:
     - agents/index.md
     - Architectures: agents/architectures.md
