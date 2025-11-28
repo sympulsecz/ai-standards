@@ -72,23 +72,19 @@ nav:
     - Architectures: agents/architectures.md
     - Building Agents: agents/building-agents.md
     - Safety & Guardrails: agents/safety-guardrails.md
-  - Model Context Protocol:
-    - mcp/index.md
-    - Architecture: mcp/architecture.md
-    - Building Tools: mcp/building-tools.md
   - Automation:
     - automation/index.md
     - CI/CD Integration: automation/ci-cd.md
     - Testing with AI: automation/testing.md
-  - LLM Development:
-    - llm-development/index.md
-    - API Patterns: llm-development/api-patterns.md
-    - RAG: llm-development/rag.md
-    - Evaluation: llm-development/evaluation.md
   - Security:
     - security/index.md
     - Data Handling: security/data-handling.md
     - Prompt Injection: security/prompt-injection.md
+  - Integration Patterns:
+    - integration-patterns/index.md
+    - Model Context Protocol: integration-patterns/mcp.md
+    - API Patterns: integration-patterns/api-patterns.md
+    - RAG: integration-patterns/rag.md
   - Reference:
     - Glossary: reference/glossary.md
 
