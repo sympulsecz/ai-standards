@@ -5,8 +5,7 @@ This section covers practical patterns for integrating AI into your daily coding
 ## What You'll Learn
 
 - **Effective Prompting**: How to communicate with AI to get useful results
-- **Code Review**: Patterns for using AI in the review process
-- **Debugging**: Systematic approaches to AI-assisted debugging
+- **Code Inspection**: Patterns for reviewing and debugging code with AI assistance
 
 ## The Core Skill
 
@@ -51,5 +50,4 @@ The most effective approach is collaborative: use AI to accelerate your work whi
 ## Sections
 
 - [Effective Prompting](effective-prompting.md) - Techniques for clear, productive AI interactions
-- [Code Review](code-review.md) - Using AI as part of your review process
-- [Debugging](debugging.md) - Systematic AI-assisted debugging approaches
+- [Code Inspection](code-inspection.md) - Using AI to review and debug code effectively
