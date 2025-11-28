@@ -38,14 +38,6 @@ This documentation provides patterns, mental models, and best practices for inte
 
     [:octicons-arrow-right-24: Explore agents](agents/index.md)
 
-- :material-connection:{ .lg .middle } **Model Context Protocol**
-
-    ---
-
-    MCP architecture, building tools, and integration patterns.
-
-    [:octicons-arrow-right-24: Learn MCP](mcp/index.md)
-
 - :material-cog-sync:{ .lg .middle } **Automation**
 
     ---
@@ -54,14 +46,6 @@ This documentation provides patterns, mental models, and best practices for inte
 
     [:octicons-arrow-right-24: Automate](automation/index.md)
 
-- :material-api:{ .lg .middle } **LLM Development**
-
-    ---
-
-    API patterns, RAG, evaluation strategies, and structured outputs.
-
-    [:octicons-arrow-right-24: Build with LLMs](llm-development/index.md)
-
 - :material-shield-check:{ .lg .middle } **Security**
 
     ---
@@ -69,6 +53,14 @@ This documentation provides patterns, mental models, and best practices for inte
     Data handling, prompt injection prevention, and compliance.
 
     [:octicons-arrow-right-24: Stay secure](security/index.md)
+
+- :material-connection:{ .lg .middle } **Integration Patterns**
+
+    ---
+
+    Model Context Protocol, API patterns, and RAG implementation.
+
+    [:octicons-arrow-right-24: Integration guide](integration-patterns/index.md)
 
 - :material-book-open-variant:{ .lg .middle } **Reference**
 
@@ -86,7 +78,7 @@ This documentation provides patterns, mental models, and best practices for inte
 
 2. **Want to improve daily coding?** Jump to [AI-Assisted Development](ai-assisted-development/index.md) for practical patterns.
 
-3. **Building AI features?** Check [LLM Development](llm-development/index.md) for API patterns and architecture guidance.
+3. **Integrating AI with external systems?** Check [Integration Patterns](integration-patterns/index.md) for MCP, API patterns, and RAG.
 
 4. **Working with agents?** The [Agents](agents/index.md) section covers architectures and reliability patterns.
 
