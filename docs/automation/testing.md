@@ -152,6 +152,13 @@ Before using AI-generated tests:
 - [ ] Do error tests expect the right errors?
 - [ ] Is test data realistic?
 
+!!! example "Example: AI Suggesting Test Improvements"
+    ![AI recommending test assertions](../images/automation/coderabbit_test_verification_2.png)
+
+    This example shows CodeRabbit reviewing a test and suggesting "Codebase Verification" improvements. The AI identifies that the test lacks explicit assertions to verify the label's position, recommending: "Consider adding assertions to explicitly verify the label's position to ensure the label positioning functionality works as expected."
+
+    Note the human developer's response explaining why the existing approach works—demonstrating the important pattern of AI suggesting improvements while humans make final judgment calls about test design.
+
 ### 3. Refine and Expand
 
 Iterate on the generated tests:
