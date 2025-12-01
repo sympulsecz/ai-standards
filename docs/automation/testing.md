@@ -1,350 +1,191 @@
 # Testing with AI
 
-AI can assist with test creation, maintenance, and analysis. Understanding its strengths and limitations helps you apply it effectively.
+AI can accelerate test creation but requires careful application. This guide helps you decide when to use it, how to apply it effectively, and what to avoid.
 
-## AI Testing Capabilities
+## Project Context Matters
 
-### Test Generation
+Your approach depends fundamentally on whether you're starting fresh or working with existing code.
 
-AI can generate tests from:
+### Greenfield Projects
 
-- Function signatures and docstrings
-- Existing code patterns
-- Specifications or requirements
-- Example inputs and outputs
+No existing tests means no patterns for AI to learn from. You might establish poor testing practices early that become the project standard. However, you can generate comprehensive coverage quickly and establish conventions from the start.
 
-**What it does well:**
+**Strategy:**
 
-- Boilerplate test structure
-- Common test cases
-- Edge case suggestions
-- Test data generation
+- Use AI to generate initial test structure and coverage
+- **Invest heavily in reviewing the first tests**—these set the pattern
+- Manually write a few exemplary tests first, then use AI to match that style
+- Focus review on: Are assertions meaningful? Do tests verify actual behavior?
 
-**What it struggles with:**
+### Legacy/Enterprise Projects
 
-- Complex business logic validation
-- Integration test scenarios
-- Performance test design
-- Understanding implicit requirements
+AI learns from existing patterns and domain knowledge embedded in tests. However, it may replicate legacy patterns you want to avoid, or miss implicit business rules.
 
-### Test Analysis
+**Strategy:**
 
-AI can analyze test results to:
+- Provide examples of your best existing tests as context
+- Use AI to fill coverage gaps in modules with established patterns
+- Target specific scenarios: "generate tests for this new endpoint matching the style of UserController tests"
+- Validate AI-generated expected values against similar existing tests
 
-- Summarize failures
-- Suggest causes
-- Identify patterns
-- Prioritize fixes
+## When to Use AI for Testing
 
-### Test Maintenance
+Use AI when:
 
-AI can help maintain tests by:
+| Scenario | Why It Works |
+|----------|--------------|
+| **Filling coverage gaps** | AI excels at generating variations of existing patterns |
+| **Boilerplate test structure** | Setup/teardown, fixtures, common assertions |
+| **Test data generation** | Creating realistic test fixtures, edge cases, boundary values |
+| **Regression test expansion** | "Generate tests for these 5 edge cases I just thought of" |
+| **Updating tests for refactored code** | AI can adapt tests to new signatures/structures |
+| **Exploring edge cases** | AI suggests scenarios you might not have considered |
 
-- Updating tests when code changes
-- Identifying obsolete tests
-- Suggesting refactoring
+## When NOT to Use AI
 
-## Test Generation Patterns
+Skip AI and write tests manually for:
 
-### Unit Test Generation
+| Scenario | Why Manual Is Better |
+|----------|---------------------|
+| **Critical business logic** | You need to deeply understand what correct behavior means |
+| **Security validations** | Too important to trust AI's interpretation of security requirements |
+| **Regulatory compliance** | Compliance tests encode legal requirements—human verification essential |
+| **Complex integration scenarios** | AI lacks understanding of system-wide invariants and edge cases |
+| **Tests encoding domain knowledge** | Your first tests for a new domain—these teach AI what to do later |
+| **When you don't understand the expected behavior** | If you can't verify AI's assertions, write it yourself first |
 
-Generate tests for individual functions:
-
-```
-Input:
-- Function code
-- Type information
-- Docstrings if available
-
-Output:
-- Test cases covering:
-  - Happy path
-  - Edge cases
-  - Error conditions
-  - Boundary values
-```
-
-**Effective prompting:**
-
-```
-Generate unit tests for this function:
-
-```python
-def calculate_discount(price: float, customer_tier: str) -> float:
-    """
-    Calculate discount based on customer tier.
-    
-    Args:
-        price: Original price (must be positive)
-        customer_tier: One of 'bronze', 'silver', 'gold'
-    
-    Returns:
-        Discounted price
-    
-    Raises:
-        ValueError: If price is negative or tier is invalid
-    """
-```
-
-Include tests for:
-
-- Valid inputs for each tier
-- Invalid tier values
-- Negative price
-- Zero price
-- Large price values
-
-```
-
-### Property-Based Test Suggestions
-
-AI can suggest properties to test:
-
-```
-
-For a sorting function, test these properties:
-
-- Output length equals input length
-- All input elements appear in output
-- Output is ordered
-- Sorting twice gives same result
-
-```
-
-### Test Data Generation
-
-Generate realistic test data:
-
-```
-
-Generate 10 test users with:
-
-- Realistic names
-- Valid email formats
-- Various ages (18-80)
-- Different account statuses
-- Edge cases (very long names, special characters)
-
-```
+**Rule of thumb:** If you can't confidently review whether AI's expected values are correct, don't use AI to generate that test.
 
 ## Practical Workflow
 
-### 1. Generate Initial Tests
+### 1. Preparation
 
-Ask AI to create a first draft:
+**For greenfield:**
+
+- Write 2-3 exemplary tests manually first
+- Establish conventions: naming, structure, assertion style
+
+**For legacy:**
+
+- Identify the best existing tests in your codebase
+- Note patterns you want to replicate (and avoid)
+
+### 2. Generation
+
+Provide clear context:
 
 ```
+Generate tests for the `processPayment` method.
 
-Generate comprehensive unit tests for the UserService class.
-Focus on the create_user and update_user methods.
-Use pytest conventions.
-Include both success and error cases.
+Match the style of these existing tests: [paste example]
 
+Cover these scenarios:
+- Successful payment
+- Insufficient funds
+- Invalid payment method
+- Network timeout
+- Duplicate transaction prevention
+
+Use pytest with our standard fixtures (db_session, mock_payment_gateway).
 ```
 
-### 2. Review Generated Tests
+**For greenfield:** Be more prescriptive about structure since there's no existing pattern.
 
-Before using AI-generated tests:
+**For legacy:** Reference specific existing tests to match their style.
 
-- [ ] Do tests actually test the right behavior?
-- [ ] Are assertions meaningful (not just "doesn't crash")?
-- [ ] Are edge cases actually edge cases?
-- [ ] Do error tests expect the right errors?
-- [ ] Is test data realistic?
+### 3. Critical Review
+
+Check every generated test:
+
+- **Assertions are specific** - Not just checking for non-null results
+- **Expected values are correct** - Can you verify this is the right behavior?
+- **Tests fail for the right reasons** - Break the code, verify test catches it
+- **Edge cases are actually edge cases** - Not just random variations
+- **Follows project conventions** - Naming, structure, fixtures match existing tests
+- **No duplicate coverage** - Not testing the same thing as existing tests
 
 !!! example "Example: AI Suggesting Test Improvements"
     ![AI recommending test assertions](../images/automation/coderabbit_test_verification_2.png)
 
-    This example shows CodeRabbit reviewing a test and suggesting "Codebase Verification" improvements. The AI identifies that the test lacks explicit assertions to verify the label's position, recommending: "Consider adding assertions to explicitly verify the label's position to ensure the label positioning functionality works as expected."
+    CodeRabbit suggests adding explicit assertions to verify label positioning. The developer explains why the existing approach works—demonstrating that AI suggestions inform decisions, but humans judge whether they're correct for the specific context.
 
-    Note the human developer's response explaining why the existing approach works—demonstrating the important pattern of AI suggesting improvements while humans make final judgment calls about test design.
+### 4. Iteration
 
-### 3. Refine and Expand
+If generated tests are low quality:
 
-Iterate on the generated tests:
+- Add more context about what you're testing and why
+- Provide better examples of existing tests
+- Be more specific about edge cases and expected behavior
+- Consider whether this is a "don't use AI" scenario
 
-```
+## Common Pitfalls
 
-These tests don't cover the case where the database connection fails.
-Add tests for:
-
-- Database timeout
-- Connection refused
-- Partial write failure
+**False Confidence** - Test passes but verifies nothing meaningful:
 
 ```
-
-### 4. Integrate into Suite
-
-Ensure generated tests:
-
-- Follow project conventions
-- Use existing fixtures
-- Don't duplicate existing tests
-- Are maintainable
-
-## Limitations and Pitfalls
-
-### False Confidence
-
-AI-generated tests may pass without testing anything meaningful:
-
-```python
-# Looks like a test, but tests nothing useful
-def test_function_runs():
-    result = complex_function(input)
-    assert result is not None  # Always passes if function doesn't crash
+test_process_payment():
+    result = process_payment(payment_data)
+    assert result is not null  // Useless—just checks it doesn't crash
 ```
 
-**Mitigation:** Review test assertions critically.
-
-### Incorrect Assumptions
-
-AI may misunderstand what correct behavior is:
-
-```python
-# AI assumed wrong expected value
-def test_discount():
-    assert calculate_discount(100, 'gold') == 80  # Wrong expectation
-```
-
-**Mitigation:** Verify expected values against actual requirements.
-
-### Overtesting
-
-AI may generate excessive tests:
-
-```python
-# Do we really need all these?
-def test_add_1_plus_1(): assert add(1, 1) == 2
-def test_add_1_plus_2(): assert add(1, 2) == 3
-def test_add_1_plus_3(): assert add(1, 3) == 4
-# ... hundreds more
-```
-
-**Mitigation:** Focus on meaningful cases, not quantity.
-
-### Missing Context
-
-AI doesn't know:
-
-- Your system's invariants
-- Business rules not in code
-- External dependencies' behavior
-- Historical bugs to prevent
-
-**Mitigation:** Provide context and review for gaps.
-
-## Test Analysis with AI
-
-### Failure Analysis
-
-When tests fail, AI can help diagnose:
+**Wrong Expected Values** - AI guesses incorrectly:
 
 ```
-These tests are failing:
-[test output]
-
-The code that changed:
-[diff]
-
-What might be causing these failures?
+test_calculate_tax():
+    assert calculate_tax(100, "CA") == 8.5  // Is CA tax rate 8.5%? Verify!
 ```
 
-### Flaky Test Investigation
-
-For intermittently failing tests:
+**Missing Domain Context** - AI doesn't know your business rules:
 
 ```
-This test passes ~80% of the time:
-[test code]
-
-What could cause intermittent failures?
-Suggest fixes for each potential cause.
+// AI might not know that duplicate transactions within 1 minute should be rejected
+// Or that premium users get different pricing
+// Or that certain operations require two-factor authentication
 ```
 
-### Coverage Gap Analysis
-
-Identify untested code paths:
+**Overtesting** - Hundreds of nearly identical tests that don't add coverage:
 
 ```
-Here's a function and its tests:
-[function]
-[tests]
-
-What scenarios are not covered by these tests?
+test_add_1_1(): assert add(1,1) == 2
+test_add_1_2(): assert add(1,2) == 3
+// ...100 more variations that test the same logic
 ```
 
-## Integration Testing
+**For greenfield projects:** Pay extra attention to "false confidence" tests—they establish bad patterns.
 
-AI assistance for integration tests requires more guidance:
+**For legacy projects:** Watch for tests that don't match existing domain understanding.
 
-### Provide System Context
+## Tool Integration
 
-```
-Our system has these components:
-- REST API (FastAPI)
-- PostgreSQL database
-- Redis cache
-- External payment API
+### AI Coding Assistants (Copilot, Cursor, etc.)
 
-Generate integration tests for the checkout flow that:
-- Test the full path from API to database
-- Mock the external payment API
-- Verify cache behavior
-```
+- Inline suggestions work well for simple test cases
+- Use chat/agent mode for generating multiple related tests
+- Reference existing test files to maintain consistency
 
-### Test Environment Considerations
+### Code Review Tools (CodeRabbit, etc.)
 
-```
-Integration tests run in:
-- Docker Compose environment
-- Fresh database per test class
-- Mocked external services
+- Useful for catching missing test coverage in PRs
+- Can suggest additional test scenarios
+- Human review still required—tools catch mechanical issues, not domain correctness
 
-Generate tests that work in this environment.
-```
+### Testing Frameworks
 
-## Best Practices
+AI works with any framework (pytest, Jest, JUnit, etc.) but provide framework-specific context:
 
-### Human Review is Required
-
-Always review AI-generated tests:
-
-- Are they testing the right things?
-- Are assertions correct?
-- Will they catch real bugs?
-
-### Start Small
-
-Don't generate all tests at once:
-
-- Start with one module
-- Review thoroughly
-- Learn what works
-- Scale up gradually
-
-### Iterate on Prompts
-
-Improve test quality by improving prompts:
-
-- Add context about coding standards
-- Include examples of good tests
-- Specify what to focus on
-
-### Track Quality
-
-Monitor AI-generated test effectiveness:
-
-- Do they catch real bugs?
-- How often do they need manual fixes?
-- Are they maintainable?
+- Mention the framework in prompts
+- Include examples using framework conventions
+- Specify fixture/mock patterns your project uses
 
 ## Key Takeaways
 
-- AI can accelerate test creation but requires careful review
-- Generated tests may look good but test nothing meaningful
-- Always verify expected values against actual requirements
-- AI works best for boilerplate and suggestions, not complete test suites
-- Integration tests need more context and guidance
-- Review AI-generated tests as critically as AI-generated code
+- Context determines strategy—greenfield projects need careful pattern-setting with the first tests; legacy projects provide existing patterns to learn from
+- Use AI for coverage and boilerplate, not for critical business logic, security validations, or regulatory compliance
+- Every generated test needs human review—verify assertions are meaningful, expected values are correct, and tests fail for the right reasons
+- Start small, learn, then scale—generate tests for one module, review thoroughly, understand what works, then expand
+- Always provide context—reference existing tests, specify framework and scenarios, describe domain rules AI can't infer
+- For greenfield: Establish quality early—the first AI-generated tests become the template; invest in reviewing them thoroughly
+- For legacy: Point AI to your best existing tests and domain-rich test suites to maintain consistency
+- Integration tests need more context—provide architectural overview, component relationships, and mocking strategies
+- Track quality over time—do AI-generated tests catch real bugs, need fixes, and remain maintainable
+- When in doubt, write it manually—especially for tests encoding critical domain knowledge or when you can't verify AI's expected values
