@@ -73,7 +73,6 @@ nav:
     - Safety & Guardrails: agents/safety-guardrails.md
   - Automation:
     - automation/index.md
-    - CI/CD Integration: automation/ci-cd.md
     - Testing with AI: automation/testing.md
   - Security:
     - security/index.md
