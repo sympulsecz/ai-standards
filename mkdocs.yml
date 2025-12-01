@@ -77,7 +77,6 @@ nav:
   - Security:
     - security/index.md
     - Data Handling: security/data-handling.md
-    - Prompt Injection: security/prompt-injection.md
   - Integration Patterns:
     - integration-patterns/index.md
     - Model Context Protocol: integration-patterns/mcp.md
