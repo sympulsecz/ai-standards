@@ -1,0 +1,163 @@
+/* Define brand color variables from colors.txt */
+:root {
+    --color-primary: #143243;
+    --color-secondary: #007D7C;
+    --color-text: #143243;
+    --color-accent: #00BAB8;
+    --color-button-link: #1E7F83;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray-light: #A4A9AA;
+    --color-primary-dark: #143243;
+    --color-blue-medium: #246279;
+    --color-teal-dark: #1F5659;
+    --color-teal-darker: #006766;
+    --color-accent-bright: #00BAB8;
+    --color-blue-pale: #D1E4E5;
+    --color-cyan-pale: #E8F7F8;
+}
+
+/* Full-width layout - remove max-width constraint on grid */
+.md-grid {
+    max-width: none;
+}
+
+/* Add padding so content doesn't touch screen edges */
+.md-main__inner {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* Limit main content width for readability (~800px) */
+/* Right sidebar (TOC) will stay next to content, not float right */
+.md-content__inner {
+    max-width: 50rem; /* ~800px, adjust to taste */
+}
+
+/* Add spacing between left sidebar and main content */
+.md-content {
+    margin-left: 2rem;
+    margin-right: auto;
+    max-width: 840px;
+}
+
+@media screen and (min-width: 1200px) {
+    .md-header__inner {
+	margin-left: 2rem;
+	margin-right: 2rem;
+    }
+}
+
+/* Responsive: reduce padding on mobile/tablet (below 960px) */
+@media screen and (max-width: 959px) {
+    .md-main__inner {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .md-content {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .md-content__inner {
+        max-width: 100%;
+    }
+}
+
+/* Responsive: minimal padding on small mobile (below 600px) */
+@media screen and (max-width: 599px) {
+    .md-main__inner {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .md-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Apply brand colors to Material theme (dark mode) */
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: var(--color-primary);
+    --md-primary-fg-color--light: var(--color-blue-medium);
+    --md-primary-fg-color--dark: var(--color-primary-dark);
+    --md-accent-fg-color: var(--color-accent);
+    --md-accent-fg-color--transparent: rgba(0, 186, 184, 0.1);
+}
+
+/* Apply brand colors to Material theme (light mode) */
+[data-md-color-scheme="default"] {
+    --md-primary-fg-color: var(--color-primary);
+    --md-primary-fg-color--light: var(--color-blue-medium);
+    --md-primary-fg-color--dark: var(--color-primary-dark);
+    --md-accent-fg-color: var(--color-accent);
+    --md-accent-fg-color--transparent: rgba(0, 186, 184, 0.1);
+}
+
+/* Link colors using brand variables */
+.md-typeset a {
+    color: var(--color-button-link);
+}
+
+.md-typeset a:hover {
+    color: var(--color-secondary);
+}
+
+/* Active navigation item in left sidebar */
+.md-nav__link--active {
+    color: var(--color-button-link) !important;
+}
+
+.md-nav__link--active:hover {
+    color: var(--color-secondary) !important;
+}
+
+/* Active navigation item background/border accent */
+.md-nav__item .md-nav__link--active {
+    color: var(--color-button-link) !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+    color: var(--color-accent) !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active:hover {
+    color: var(--color-accent-bright) !important;
+}
+
+/* Inline code styling */
+.md-typeset code {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--color-text);
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e8e8e8;
+}
+
+/* Code blocks - ensure readable backgrounds */
+.md-typeset pre > code {
+    background-color: transparent;
+}
+
+.md-typeset .highlight,
+.md-typeset .highlighttable {
+    background-color: #f5f5f5;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight,
+[data-md-color-scheme="slate"] .md-typeset .highlighttable {
+    background-color: #0d1117;
+}
+
+/* Code block container */
+.md-typeset pre {
+    background-color: #f5f5f5;
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre {
+    background-color: #0d1117;
+}
