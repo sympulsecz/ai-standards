@@ -10,8 +10,8 @@ all: presentation.pdf
 
 # Compile the presentation (run twice for TOC and references)
 presentation.pdf: presentation.tex
-	pdflatex -interaction=nonstopmode presentation.tex
-	pdflatex -interaction=nonstopmode presentation.tex
+	/Library/TeX/texbin/pdflatex -interaction=nonstopmode presentation.tex
+	/Library/TeX/texbin/pdflatex -interaction=nonstopmode presentation.tex
 
 # Clean auxiliary files
 clean:
