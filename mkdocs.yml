@@ -4,16 +4,13 @@ site_url: https://sympulse.github.io/ai-standards/
 
 theme:
   name: material
+  logo: images/logo-light.svg
   palette:
     - scheme: slate
-      primary: deep purple
-      accent: amber
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
     - scheme: default
-      primary: deep purple
-      accent: amber
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -89,4 +86,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/sympulse/ai-standards
+
+extra_css:
+  - stylesheets/extra.css
 
