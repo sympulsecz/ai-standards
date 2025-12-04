@@ -60,3 +60,5 @@ The most effective approach is collaborative: use AI to accelerate your work whi
 - [Tool Use: Fundamentals](tool-use-fundamentals.md) - Prompting techniques for effective AI communication
 - [Tool Use: Workflows](tool-use-workflows.md) - Practical workflows for review, debugging, and refactoring
 - [Instruction Files](instruction-files.md) - Configuring AI tools to match your project conventions
+
+For understanding how agentic coding tools work under the hood, see [Agents: Working with Agents](../agents/working-with-agents.md).

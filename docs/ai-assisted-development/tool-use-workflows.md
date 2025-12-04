@@ -1,9 +1,92 @@
 # Tool Use: Workflows
 
-This page covers practical workflows for common activities: reviewing code, debugging issues, refactoring systems, and understanding unfamiliar code. Each section provides specific prompts, patterns, and examples.
+This page covers practical workflows for common activities: understanding unfamiliar code, reviewing code, debugging issues, and refactoring systems. Each section provides specific prompts, patterns, and examples.
 
 !!! info "Complementary Pages"
     This page focuses on specific workflows and examples. For universal principles that apply across all activities, see [Tool Use: Fundamentals](tool-use-fundamentals.md).
+
+## Understanding Code
+
+When encountering unfamiliar code, AI can explain behavior, document intent, and trace execution flow.
+
+### Explaining Legacy Code
+
+**Basic explanation:**
+
+```
+Explain what this function does:
+- What is its purpose?
+- What are the inputs and outputs?
+- What are the main steps?
+
+[paste function]
+```
+
+**Detailed analysis:**
+
+```
+Analyze this code section:
+- What problem does it solve?
+- Why might it be structured this way?
+- What edge cases does it handle?
+- Are there any subtle behaviors or gotchas?
+
+[paste code]
+```
+
+### Documentation Generation
+
+**Function documentation:**
+
+```
+Generate documentation for this function following our JSDoc style:
+- Summary of purpose
+- Parameter descriptions with types
+- Return value description
+- Example usage
+- Any important notes or warnings
+
+[paste function]
+```
+
+**API documentation:**
+
+```
+Document this API endpoint:
+- Purpose and use case
+- Request format and parameters
+- Response format
+- Error conditions
+- Example request/response
+
+[paste endpoint code]
+```
+
+### Tracing Execution
+
+**Following data flow:**
+
+```
+Trace how this data flows through the system:
+- Input: [describe input]
+- Show which functions process it
+- Show transformations applied
+- Show final output format
+
+[paste relevant code sections]
+```
+
+**Understanding side effects:**
+
+```
+What side effects does this function have?
+- Database modifications
+- External API calls
+- File system operations
+- Global state changes
+
+[paste function]
+```
 
 ## Code Review
 
@@ -447,90 +530,12 @@ For performance-sensitive code, benchmark before and after refactoring to ensure
 - **Code you don't understand**: Always understand code before refactoring
 - **High-risk production code**: Critical systems with no test coverage should be approached carefully
 
-## Understanding Code
-
-When encountering unfamiliar code, AI can explain behavior, document intent, and trace execution flow.
-
-### Explaining Legacy Code
-
-**Basic explanation:**
-
-```
-Explain what this function does:
-- What is its purpose?
-- What are the inputs and outputs?
-- What are the main steps?
-
-[paste function]
-```
-
-**Detailed analysis:**
-
-```
-Analyze this code section:
-- What problem does it solve?
-- Why might it be structured this way?
-- What edge cases does it handle?
-- Are there any subtle behaviors or gotchas?
-
-[paste code]
-```
-
-### Documentation Generation
-
-**Function documentation:**
-
-```
-Generate documentation for this function following our JSDoc style:
-- Summary of purpose
-- Parameter descriptions with types
-- Return value description
-- Example usage
-- Any important notes or warnings
-
-[paste function]
-```
-
-**API documentation:**
-
-```
-Document this API endpoint:
-- Purpose and use case
-- Request format and parameters
-- Response format
-- Error conditions
-- Example request/response
-
-[paste endpoint code]
-```
-
-### Tracing Execution
-
-**Following data flow:**
-
-```
-Trace how this data flows through the system:
-- Input: [describe input]
-- Show which functions process it
-- Show transformations applied
-- Show final output format
-
-[paste relevant code sections]
-```
-
-**Understanding side effects:**
-
-```
-What side effects does this function have?
-- Database modifications
-- External API calls
-- File system operations
-- Global state changes
-
-[paste function]
-```
-
 ## Key Takeaways
+
+**Understanding Code:**
+- Ask AI to explain unfamiliar code before modifying it
+- Generate documentation for legacy code that lacks it
+- Trace execution flow for complex systems
 
 **Code Review:**
 - Use AI for pattern-based issues, humans for business logic and architecture
@@ -548,15 +553,10 @@ What side effects does this function have?
 - Watch for subtle behavior changes and over-abstraction
 - Understand code before refactoring it
 
-**Understanding Code:**
-- Ask AI to explain unfamiliar code before modifying it
-- Generate documentation for legacy code that lacks it
-- Trace execution flow for complex systems
-
 For universal principles that apply across all these workflows, see [Tool Use: Fundamentals](tool-use-fundamentals.md).
 
 ## Related Reading
 
 - [Tool Use: Fundamentals](tool-use-fundamentals.md) - Prompting techniques for effective AI communication
 - [Instruction Files](instruction-files.md) - Configuring AI for your project
-- [Testing with AI](../automation/testing.md) - Generating and improving tests
+- [Testing with AI](../testing.md) - Generating and improving tests
