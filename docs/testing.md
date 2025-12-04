@@ -105,7 +105,7 @@ Check every generated test:
 - **No duplicate coverage** - Not testing the same thing as existing tests
 
 !!! example "Example: AI Suggesting Test Improvements"
-    ![AI recommending test assertions](../images/automation/coderabbit_test_verification_2.png)
+    ![AI recommending test assertions](images/automation/coderabbit_test_verification_2.png)
 
     CodeRabbit suggests adding explicit assertions to verify label positioning. The developer explains why the existing approach works—demonstrating that AI suggestions inform decisions, but humans judge whether they're correct for the specific context.
 

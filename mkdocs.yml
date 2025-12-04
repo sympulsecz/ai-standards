@@ -74,16 +74,12 @@ nav:
     - Model Context Protocol (MCP): agents/mcp.md
     - Building Agents: agents/building-agents.md
     - RAG Systems: agents/rag.md
-    - Safety & Guardrails: agents/safety-guardrails.md
-  - Automation:
-    - Overview: automation/index.md
-    - Testing with AI: automation/testing.md
-    - Extending Tools with MCP: automation/mcp.md
-  - Security:
-    - Overview: security/index.md
-    - Data Handling: security/data-handling.md
+  - Operations:
+    - CI/CD: ci-cd.md
+    - Testing: testing.md
+    - Security: security/index.md
   - Reference:
-    - Glossary: reference/glossary.md
+    - Glossary: glossary.md
 
 extra:
   social:
