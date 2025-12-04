@@ -2,6 +2,14 @@
 
 AI agents represent a paradigm shift from simple request-response interactions to systems that can take actions, use tools, and work toward goals over multiple steps.
 
+!!! info "Who This Is For"
+    This section serves two audiences:
+
+    1. **Tool users** (Cursor, Claude Code, etc.): Understand what's happening under the hood so you can use these tools more effectively and know when they might fail
+    2. **Application builders**: Learn to build agent systems using LLM APIs, frameworks, or from scratch
+
+    Start with this overview, then choose your depth based on your needs. If you're just using AI coding tools daily, also check [AI-Assisted Development](../ai-assisted-development/index.md).
+
 ## What You'll Learn
 
 - **Architectures**: The patterns and designs that make agents work
@@ -81,4 +89,6 @@ Simpler approaches may be better when:
 
 - [Architectures](architectures.md) - Common patterns for building agents
 - [Building Agents](building-agents.md) - Practical implementation guidance
+- [API Integration](api-patterns.md) - Patterns for working with LLM APIs
+- [RAG Systems](rag.md) - Retrieval-Augmented Generation for grounding responses
 - [Safety & Guardrails](safety-guardrails.md) - Ensuring agents behave safely

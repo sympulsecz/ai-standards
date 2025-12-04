@@ -2,6 +2,9 @@
 
 AI can enhance automated workflows while maintaining reliability through proper guardrails and human oversight.
 
+!!! info "Who This Is For"
+    This section is for developers integrating AI into development workflows—testing, CI/CD pipelines, code review automation, and similar processes. This focuses on using AI to enhance existing workflows, not building AI applications.
+
 ## Core Principles
 
 AI automation differs from traditional automation—it's probabilistic rather than deterministic, which means it requires different expectations and safeguards.
@@ -103,3 +106,4 @@ AI can integrate into pipelines at different stages, each with different risk pr
 ## Sections
 
 - [Testing with AI](testing.md) - AI-assisted testing patterns
+- [Extending Tools with MCP](mcp.md) - Connect AI tools to internal systems and data sources

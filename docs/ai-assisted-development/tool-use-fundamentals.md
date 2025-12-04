@@ -1,10 +1,14 @@
-# Effective Prompting
+# Tool Use: Fundamentals
 
-Prompting is the skill of communicating with AI systems to get useful results. Like any communication skill, it improves with practice and understanding of the medium.
+Prompting is how you communicate intent to AI systems. Like any communication skill, it improves with practice and understanding of the medium.
+
+!!! info "Related Pages"
+    - [Tool Use: Guidelines](tool-use-guidelines.md) - What AI does well, safety principles, limitations
+    - [Tool Use: Workflows](tool-use-workflows.md) - Practical workflows for review, debugging, refactoring
 
 ## Core Principles
 
-### 1. Be Specific
+### Be Specific
 
 Vague requests produce vague results. Compare:
 
@@ -14,7 +18,7 @@ Vague requests produce vague results. Compare:
 | "Fix this code" | "This function throws a null reference error when the input array is empty. Add a guard clause." |
 | "Make this better" | "Refactor this to extract the validation logic into a separate function" |
 
-### 2. Provide Context
+### Provide Context
 
 AI can only work with information you provide. Include:
 
@@ -31,7 +35,7 @@ AI can only work with information you provide. Include:
     - Are there constraints it should know about?
     - Is there existing code it should match?
 
-### 3. Show, Don't Just Tell
+### Show, Don't Just Tell
 
 Examples are powerful. When you want a specific format or style:
 
@@ -52,7 +56,7 @@ Now create similar endpoints for: GET /posts/:id, GET /comments/:id
 
 This technique (few-shot prompting) guides the AI toward your desired output format.
 
-### 4. Break Down Complex Tasks
+### Break Down Complex Tasks
 
 Large tasks often produce better results when decomposed:
 
@@ -69,7 +73,7 @@ Each focused prompt allows you to verify and refine before continuing.
 
 ## Prompting Patterns
 
-### The Structured Request
+### Structured Request
 
 Organize complex requests with clear sections:
 
@@ -90,7 +94,7 @@ Refactor the UserService class to use dependency injection.
 - No new external dependencies
 ```
 
-### The Iterative Refinement
+### Iterative Refinement
 
 Start broad, then narrow:
 
@@ -98,7 +102,7 @@ Start broad, then narrow:
 2. "Expand on approach #2 with implementation details"
 3. "Write the cache invalidation logic for that approach"
 
-### The Rubber Duck
+### Rubber Duck
 
 Use AI as an intelligent sounding board:
 
@@ -113,7 +117,7 @@ Our use case: ~10k users, permissions change rarely, we query permissions on eve
 What are the tradeoffs I should consider?
 ```
 
-### The Constraint-First Request
+### Constraint-First Request
 
 When you have specific requirements, state them upfront:
 
@@ -137,7 +141,7 @@ The AI may be missing information:
 ```
 [Previous request didn't work]
 
-Additional context: This code runs in a browser environment, so Node.js APIs aren't available. 
+Additional context: This code runs in a browser environment, so Node.js APIs aren't available.
 Also, we need to support IE11.
 ```
 
@@ -157,7 +161,7 @@ Instead, use functional components with hooks.
 If the first approach isn't suitable:
 
 ```
-That approach won't work because [reason]. 
+That approach won't work because [reason].
 
 Can you suggest an alternative that doesn't require [problematic aspect]?
 ```
@@ -182,7 +186,7 @@ Throwing massive amounts of unstructured information:
 Here's my entire codebase [10,000 lines]. Fix the bug.
 ```
 
-Better: Identify the relevant code and include only that.
+**Better**: Identify the relevant code and include only that.
 
 ### Assumption of Context
 
@@ -192,7 +196,7 @@ Expecting the AI to know things you haven't told it:
 Update the user model.
 ```
 
-Better: "Update the User model in `src/models/user.ts` to add an `isVerified` boolean field."
+**Better**: "Update the User model in `src/models/user.ts` to add an `isVerified` boolean field."
 
 ### Vague Quality Requests
 
@@ -200,7 +204,7 @@ Better: "Update the User model in `src/models/user.ts` to add an `isVerified` bo
 Make this code better.
 ```
 
-Better: Specify what "better" means—more readable? More performant? Better error handling?
+**Better**: Specify what "better" means—more readable? More performant? Better error handling?
 
 ### Ignoring Output
 
@@ -219,3 +223,5 @@ Accepting AI output without review. Always:
 - Break complex tasks into steps
 - Iterate and refine based on results
 - Always review and verify output
+
+Next: Apply these techniques in [practical workflows](tool-use-workflows.md) for code review, debugging, and refactoring.

@@ -2,6 +2,9 @@
 
 AI systems introduce new security considerations. Understanding these risks and implementing appropriate mitigations is essential for building safe AI-powered applications.
 
+!!! info "Who This Is For"
+    This section is primarily for developers **building AI applications** that serve customers. If you're using AI coding tools for your own development, see the "Using AI Coding Assistants Securely" section below and [Data Handling](data-handling.md) for what data you can safely share with AI services.
+
 ## Threat Landscape
 
 AI introduces security concerns at multiple levels:

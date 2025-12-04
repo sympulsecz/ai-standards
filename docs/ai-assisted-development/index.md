@@ -2,10 +2,16 @@
 
 This section covers practical patterns for integrating AI into your daily coding workflow.
 
+!!! info "Who This Is For"
+    This section is for developers using AI coding tools like Cursor, Claude Code, GitHub Copilot, or similar assistants in their daily work. If you're building AI features into applications, check [Agents](../agents/index.md) and [Security](../security/index.md) instead.
+
 ## What You'll Learn
 
-- **Effective Prompting**: How to communicate with AI to get useful results
-- **Code Inspection**: Patterns for reviewing and debugging code with AI assistance
+- **Evaluating Tools**: How to choose AI coding tools based on context capability, data handling, and workflow fit
+- **Tool Use: Guidelines**: What AI does well vs poorly, safety principles, limitations, and team practices
+- **Tool Use: Fundamentals**: Prompting techniques to communicate effectively with AI
+- **Tool Use: Workflows**: Practical workflows for code review, debugging, refactoring, and understanding code
+- **Instruction Files**: Configuring AI tools to match your project conventions and encode your workflows
 
 ## The Core Skill
 
@@ -49,5 +55,8 @@ The most effective approach is collaborative: use AI to accelerate your work whi
 
 ## Sections
 
-- [Effective Prompting](effective-prompting.md) - Techniques for clear, productive AI interactions
-- [Code Inspection](code-inspection.md) - Using AI to review and debug code effectively
+- [Evaluating Tools](evaluating-tools.md) - Choosing AI coding tools based on context, data handling, and workflow
+- [Tool Use: Guidelines](tool-use-guidelines.md) - What AI does well, safety principles, and team practices
+- [Tool Use: Fundamentals](tool-use-fundamentals.md) - Prompting techniques for effective AI communication
+- [Tool Use: Workflows](tool-use-workflows.md) - Practical workflows for review, debugging, and refactoring
+- [Instruction Files](instruction-files.md) - Configuring AI tools to match your project conventions
