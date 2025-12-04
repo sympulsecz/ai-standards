@@ -1,14 +1,8 @@
 # AI Standards
 
-A practical guide to working effectively with AI in software development.
+This documentation covers practical patterns for working with AI in software development. It focuses on concepts that remain useful regardless of which specific tools or models you're using. The content addresses three main areas: using AI coding assistants effectively, building AI-powered features into applications, and integrating AI into development workflows.
 
-## What This Is
-
-This documentation provides patterns, mental models, and best practices for integrating AI into your development workflow. Whether you're using AI coding assistants, building AI-powered features, or automating processes with AI, you'll find guidance here.
-
-## Guiding Principle
-
-**Concepts over products.** This documentation focuses on transferable knowledge that remains valuable regardless of which specific tools or models you use. Products and tools are mentioned as examples, not as recommendations.
+The sections explain how AI systems actually work, what makes them fail, and how to handle common concerns around security, testing, and reliability. Products are mentioned as examples to illustrate concepts, not as recommendations.
 
 ## Quick Navigation
 
@@ -18,99 +12,104 @@ This documentation provides patterns, mental models, and best practices for inte
 
     ---
 
-    Understand how AI actually works so you can debug issues, make informed decisions, and adapt as tools evolve.
+    How AI actually works: prompts, context, embeddings, inference. Foundation for everything else.
 
-    [:octicons-arrow-right-24: Get started](getting-started/key-concepts.md)
+    [:octicons-arrow-right-24: Key concepts](getting-started/key-concepts.md)
 
 - :material-code-braces:{ .lg .middle } **AI-Assisted Development**
 
     ---
 
-    Get more accurate responses from AI tools through better prompting, context management, and iterative refinement.
+    Practical patterns for using AI coding tools: prompting, code review, debugging, refactoring.
 
-    [:octicons-arrow-right-24: Learn more](ai-assisted-development/index.md)
+    [:octicons-arrow-right-24: Daily workflows](ai-assisted-development/index.md)
 
 - :material-robot:{ .lg .middle } **Agents**
 
     ---
 
-    Build autonomous AI systems that take actions reliably—or understand how your AI tools work under the hood.
+    How autonomous AI systems work—from using agentic coding tools to building your own.
 
     [:octicons-arrow-right-24: Explore agents](agents/index.md)
 
-- :material-cog-sync:{ .lg .middle } **Automation**
+- :material-cog-sync:{ .lg .middle } **Operations**
 
     ---
 
-    Integrate AI into testing, CI/CD, and code review workflows without disrupting existing processes.
+    Integrate AI into CI/CD pipelines, testing workflows, and code review.
 
-    [:octicons-arrow-right-24: Automate](automation/index.md)
+    [:octicons-arrow-right-24: CI/CD & Testing](ci-cd.md)
 
 - :material-shield-check:{ .lg .middle } **Security**
 
     ---
 
-    Protect your applications and users when building AI features—understand risks and mitigation strategies.
+    Data classification, enterprise agreements, prompt injection, protecting applications.
 
-    [:octicons-arrow-right-24: Stay secure](security/index.md)
+    [:octicons-arrow-right-24: Security](security/index.md)
 
 - :material-book-open-variant:{ .lg .middle } **Reference**
 
     ---
 
-    Glossary of AI terminology and quick reference materials.
+    Quick lookup for AI terminology.
 
-    [:octicons-arrow-right-24: Reference](reference/glossary.md)
+    [:octicons-arrow-right-24: Glossary](glossary.md)
 
 </div>
 
 ## Find Your Path
 
-Different roles need different documentation. Pick the path that matches your work:
+Different roles need different starting points.
 
-### Using AI Coding Tools Daily
+### Using AI Coding Tools
 
-**You're using**: Cursor, Claude Code, GitHub Copilot, or similar tools
+**What you're doing:** Writing code with Cursor, Claude Code, GitHub Copilot, or similar assistants.
 
-**Your path**:
+**Start here:**
 
-1. Start with [Getting Started](getting-started/key-concepts.md) to understand how these tools actually work
-2. Move to [AI-Assisted Development](ai-assisted-development/index.md) for daily coding patterns
-3. Check [Automation](automation/index.md) to enhance your workflow with testing and CI/CD
+1. [Key Concepts](getting-started/key-concepts.md) - How these tools actually work
+2. [AI-Assisted Development](ai-assisted-development/index.md) - Effective prompting and workflows
+3. [Working with Agents](agents/working-with-agents.md) - Understanding agentic coding tools
 
-**Why this matters**: Understanding how AI tools work helps you debug issues, write better prompts, and know when to trust (or question) suggestions.
+**What you'll learn:** How to write prompts that produce useful results, when AI suggestions are trustworthy, and how to debug issues when tools behave unexpectedly.
 
-### Building AI Features into Applications
+---
 
-**You're building**: AI-powered features for your applications, chatbots, or autonomous systems
+### Building AI Features
 
-**Your path**:
+**What you're doing:** Adding AI capabilities to applications—chatbots, autonomous agents, AI-powered features.
 
-1. Start with [Getting Started](getting-started/key-concepts.md) for foundational concepts
-2. Review [Security](security/index.md) to understand risks when serving customers
-3. Explore [Agents](agents/index.md) for architectures, API patterns, and RAG systems
-4. Check [Automation](automation/index.md) for testing AI-powered features
+**Start here:**
 
-**Why this matters**: Building reliable AI applications requires understanding safety guardrails, data handling, and failure modes.
+1. [Key Concepts](getting-started/key-concepts.md) - Foundation for building with AI
+2. [Security](security/index.md) - Data handling and prompt injection before shipping
+3. [Building Agents](agents/building-agents.md) - API integration, tool design, testing
+4. [RAG Systems](agents/rag.md) - Ground AI responses in your data
+
+**What you'll learn:** How to handle data classification with AI services, test non-deterministic systems, implement proper guardrails, and understand failure modes.
+
+---
 
 ### Automating Development Workflows
 
-**You're implementing**: AI in CI/CD pipelines, automated testing, or code review processes
+**What you're doing:** Integrating AI into CI/CD pipelines, automated testing, or code review processes.
 
-**Your path**:
+**Start here:**
 
-1. Start with [Getting Started](getting-started/key-concepts.md) for core concepts
-2. Jump to [Automation](automation/index.md) for testing, CI/CD, and MCP integration
-3. Optionally explore [Agents](agents/index.md) if building custom automation
+1. [Key Concepts](getting-started/key-concepts.md) - Understand how AI behaves
+2. [CI/CD](ci-cd.md) - Pipeline integration patterns
+3. [Testing](testing.md) - Generate and verify tests with AI
+4. [Security](security/index.md) - Data classification for AI services
 
-**Why this matters**: AI automation can accelerate workflows but needs proper integration to avoid disrupting existing processes.
+**What you'll learn:** Integration patterns that don't break pipelines, when AI automation helps versus when it adds overhead, and how to maintain reliability.
 
-### Quick Reference
+---
 
-**Need a specific term?** Use the [Glossary](reference/glossary.md)
+**Not sure where to start?** Everyone benefits from [Key Concepts](getting-started/key-concepts.md). Begin there.
 
-**Not sure where to start?** Begin with [Getting Started](getting-started/key-concepts.md) - it's useful for everyone.
+**Need a specific term?** Check the [Glossary](glossary.md).
 
 ## Contributing
 
-These standards are maintained collaboratively. See the repository for contribution guidelines.
+This documentation is maintained collaboratively. See the repository for contribution guidelines.
