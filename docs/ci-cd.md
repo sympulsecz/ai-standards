@@ -1,9 +1,6 @@
-# Automation
+# CI/CD with AI
 
 AI can enhance automated workflows while maintaining reliability through proper guardrails and human oversight.
-
-!!! info "Who This Is For"
-    This section is for developers integrating AI into development workflows—testing, CI/CD pipelines, code review automation, and similar processes. This focuses on using AI to enhance existing workflows, not building AI applications.
 
 ## Core Principles
 
@@ -50,14 +47,14 @@ AI can integrate into pipelines at different stages, each with different risk pr
 **PR review automation** analyzes changed files and posts review comments. Tools like GitHub Copilot, CodeRabbit, and others provide this capability with varying approaches to analysis and presentation. Don't block merges on every finding—categorize by severity, allow dismissals, and track accuracy over time.
 
 !!! example "Example: AI Review Comment"
-    ![AI code review identifying duplication](../images/automation/copilot_code_duplication.png)
+    ![AI code review identifying duplication](images/automation/copilot_code_duplication.png)
 
     This example shows GitHub Copilot identifying duplicated code logic and suggesting a refactoring approach. The AI provides specific guidance on extracting the duplicated unescape logic into a helper function, complete with code examples. Note the disclaimer "Copilot uses AI. Check for mistakes" at the bottom—a reminder that human review is essential.
 
 **Commit/PR descriptions** generate structured summaries from diffs and commits. Use as templates for humans to refine, not as final content. Match project conventions and include relevant issue references.
 
 !!! example "Example: Generated PR Description"
-    ![AI-generated PR overview](../images/automation/copilot_pr_overview_kafka.png)
+    ![AI-generated PR overview](images/automation/copilot_pr_overview_kafka.png)
 
     This example shows Copilot generating a comprehensive PR overview for an Apache Kafka contribution. The AI creates a structured description with:
 
@@ -70,7 +67,7 @@ AI can integrate into pipelines at different stages, each with different risk pr
 **Release notes compilation** groups merged PRs by category with user-facing language. Always review before publishing and maintain consistent formatting.
 
 !!! example "Example: Generated Release Notes"
-    ![AI-generated PR summary](../images/automation/coderabbit_pr_summary.png)
+    ![AI-generated PR summary](images/automation/coderabbit_pr_summary.png)
 
     This example shows CodeRabbit generating a high-level "Summary by CodeRabbit" for a merged PR. The AI automatically categorizes changes into:
 
@@ -103,7 +100,7 @@ AI can integrate into pipelines at different stages, each with different risk pr
 - Monitor accuracy, cost, and developer trust metrics continuously.
 - Consider security implications of sending code to AI services.
 
-## Sections
+## Related Reading
 
 - [Testing with AI](testing.md) - AI-assisted testing patterns
-- [Extending Tools with MCP](mcp.md) - Connect AI tools to internal systems and data sources
+- [Security](security/index.md) - Data handling and security considerations
