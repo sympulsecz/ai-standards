@@ -70,9 +70,9 @@ nav:
     - Instruction Files: ai-assisted-development/instruction-files.md
   - Agents:
     - Overview: agents/index.md
-    - Architectures: agents/architectures.md
+    - Working with Agents: agents/working-with-agents.md
+    - Model Context Protocol (MCP): agents/mcp.md
     - Building Agents: agents/building-agents.md
-    - API Integration: agents/api-patterns.md
     - RAG Systems: agents/rag.md
     - Safety & Guardrails: agents/safety-guardrails.md
   - Automation:

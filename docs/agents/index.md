@@ -1,94 +1,21 @@
 # Agents
 
-AI agents represent a paradigm shift from simple request-response interactions to systems that can take actions, use tools, and work toward goals over multiple steps.
-
-!!! info "Who This Is For"
-    This section serves two audiences:
-
-    1. **Tool users** (Cursor, Claude Code, etc.): Understand what's happening under the hood so you can use these tools more effectively and know when they might fail
-    2. **Application builders**: Learn to build agent systems using LLM APIs, frameworks, or from scratch
-
-    Start with this overview, then choose your depth based on your needs. If you're just using AI coding tools daily, also check [AI-Assisted Development](../ai-assisted-development/index.md).
+Agents are AI systems that autonomously plan tasks, use tools, and iterate toward goals. If you're using agentic coding tools like Cursor or Claude Code, this section explains how they work and how to use them effectively. If you're building agent systems into your applications, this section covers API integration, tool design, and extending agents with custom capabilities.
 
 ## What You'll Learn
 
-- **Architectures**: The patterns and designs that make agents work
-- **Building Agents**: Practical approaches to creating reliable agents
-- **Safety & Guardrails**: Ensuring agents behave as intended
+**[Working with Agents](working-with-agents.md)** explains how agentic coding tools differ from chat-based AI and autocomplete systems. You'll understand the observe-reason-act loop that powers these tools, learn what agents can and cannot do well, and develop strategies for working effectively with autonomous systems.
 
-## What Makes an Agent
+**[MCP (Model Context Protocol)](mcp.md)** covers extending agents with custom capabilities through the Model Context Protocol standard. You'll learn to use existing MCP servers to connect agents to databases and internal systems, understand when to create custom servers, and learn security considerations for agent extensions.
 
-The term "agent" is used loosely, but generally refers to AI systems that can:
+**[Building Agents](building-agents.md)** covers creating your own agent systems: integrating with LLM APIs, managing context and costs, designing tools agents can use, implementing error handling and observability, and testing agent behavior.
 
-1. **Take actions**: Execute code, call APIs, modify files—not just generate text
-2. **Use tools**: Invoke external capabilities to accomplish tasks
-3. **Reason about goals**: Break down objectives into steps
-4. **Operate autonomously**: Continue working without constant human guidance
-5. **Adapt**: Adjust approach based on results
+Start with [Working with Agents](working-with-agents.md) if you're using tools like Cursor or Claude Code. Explore [MCP](mcp.md) to extend agents with custom capabilities. Move to [Building Agents](building-agents.md) if you're creating agent systems for your applications.
 
-### Agent vs. Chatbot
+## Related Topics
 
-| Chatbot | Agent |
-|---------|-------|
-| Generates text responses | Takes actions in the world |
-| Single request-response | Multi-step execution |
-| Stateless between messages | Maintains working state |
-| Human drives each step | Autonomous within bounds |
+The [AI-Assisted Development](../ai-assisted-development/index.md) section covers daily workflows with AI coding tools. Many patterns there work with agentic tools, but that section focuses on usage while this section explains the underlying systems and how to build them.
 
-### The Agency Spectrum
+The [Testing](../testing.md) and [CI/CD](../ci-cd.md) pages cover patterns for integrating AI into development workflows.
 
-Systems exist on a spectrum of agency:
-
-```
-Low Agency                                              High Agency
-    │                                                        │
-    ▼                                                        ▼
-Autocomplete → Chat → Tool-Using Chat → Task Agent → Autonomous Agent
-```
-
-Most practical applications today sit in the "tool-using chat" to "task agent" range.
-
-## Why Agents Matter
-
-Agents unlock capabilities that simple chat interfaces cannot provide:
-
-- **Complex tasks**: Multi-step operations that require sequencing
-- **Integration**: Connecting AI reasoning to real systems and data
-- **Automation**: Delegating entire workflows, not just individual questions
-- **Persistence**: Working on tasks over time, not just in a single session
-
-## The Key Challenge
-
-With increased capability comes increased risk. Agents that can take actions can also:
-
-- Take wrong actions
-- Take actions with unintended consequences
-- Get stuck in loops
-- Cost money (compute, API calls, etc.)
-- Affect production systems
-
-This makes reliability and safety critical concerns—covered in detail in the [Safety & Guardrails](safety-guardrails.md) section.
-
-## When to Use Agents
-
-Agents are appropriate when:
-
-- Tasks require multiple steps or decisions
-- Integration with external systems is needed
-- The task is well-defined but execution varies
-- Human oversight can be maintained
-
-Simpler approaches may be better when:
-
-- Tasks are single-step
-- Deterministic automation suffices
-- Reliability requirements are very high
-- The cost of mistakes is severe
-
-## Sections
-
-- [Architectures](architectures.md) - Common patterns for building agents
-- [Building Agents](building-agents.md) - Practical implementation guidance
-- [API Integration](api-patterns.md) - Patterns for working with LLM APIs
-- [RAG Systems](rag.md) - Retrieval-Augmented Generation for grounding responses
-- [Safety & Guardrails](safety-guardrails.md) - Ensuring agents behave safely
+The [Security](../security/index.md) section addresses security concerns specific to AI systems, including data handling and compliance considerations that apply when using or building agents.
