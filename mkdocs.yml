@@ -53,6 +53,10 @@ plugins:
   - search
   - tags
 
+# Development server settings
+dev_addr: 127.0.0.1:8000
+use_directory_urls: true
+
 nav:
   - Home: index.md
   - Getting Started:
