@@ -56,29 +56,28 @@ plugins:
 nav:
   - Home: index.md
   - Getting Started:
-    - getting-started/index.md
     - Key Concepts: getting-started/key-concepts.md
-    - Tool Setup: getting-started/tool-setup.md
   - AI-Assisted Development:
-    - ai-assisted-development/index.md
-    - Effective Prompting: ai-assisted-development/effective-prompting.md
-    - Code Inspection: ai-assisted-development/code-inspection.md
+    - Overview: ai-assisted-development/index.md
+    - Evaluating Tools: ai-assisted-development/evaluating-tools.md
+    - "Tool Use: Guidelines": ai-assisted-development/tool-use-guidelines.md
+    - "Tool Use: Fundamentals": ai-assisted-development/tool-use-fundamentals.md
+    - "Tool Use: Workflows": ai-assisted-development/tool-use-workflows.md
+    - Instruction Files: ai-assisted-development/instruction-files.md
   - Agents:
-    - agents/index.md
+    - Overview: agents/index.md
     - Architectures: agents/architectures.md
     - Building Agents: agents/building-agents.md
+    - API Integration: agents/api-patterns.md
+    - RAG Systems: agents/rag.md
     - Safety & Guardrails: agents/safety-guardrails.md
   - Automation:
-    - automation/index.md
+    - Overview: automation/index.md
     - Testing with AI: automation/testing.md
+    - Extending Tools with MCP: automation/mcp.md
   - Security:
-    - security/index.md
+    - Overview: security/index.md
     - Data Handling: security/data-handling.md
-  - Integration Patterns:
-    - integration-patterns/index.md
-    - Model Context Protocol: integration-patterns/mcp.md
-    - API Patterns: integration-patterns/api-patterns.md
-    - RAG: integration-patterns/rag.md
   - Reference:
     - Glossary: reference/glossary.md
 

@@ -1,6 +1,35 @@
-# Key Concepts
+# Getting Started
 
-Understanding these foundational concepts will help you work effectively with any AI system.
+AI tools evolve rapidly, but core concepts remain stable. Understanding how these systems work helps you adapt to new tools, debug issues, and get better results.
+
+## The Big Picture
+
+Working with AI in development involves understanding a few key dynamics:
+
+**Context is Everything**: AI systems work by processing context (your code, your instructions, relevant information) and generating responses. The quality of outputs depends heavily on the quality and relevance of the context you provide.
+
+**AI as Collaborative Tool**: Think of AI as a knowledgeable but imperfect collaborator. It can generate code quickly, explain complex concepts, and suggest approaches to problems. It cannot understand your business requirements implicitly, guarantee correctness, or replace careful review and testing.
+
+**Iterative Refinement**: Working with AI is often iterative. Initial outputs may need refinement, and the ability to guide the AI toward better results is a learnable skill.
+
+### The Feedback Loop
+
+```
+┌─────────────────────────────────────────────┐
+│                                             │
+│   Prompt ──► Response ──► Evaluate ──┐      │
+│      ▲                               │      │
+│      └───────── Refine ◄─────────────┘      │
+│                                             │
+└─────────────────────────────────────────────┘
+```
+
+1. **Prompt**: Provide context and instructions
+2. **Response**: AI generates output
+3. **Evaluate**: Assess quality and correctness
+4. **Refine**: Adjust your prompt or provide feedback
+
+The skill is in making this loop efficient—getting good results with fewer iterations.
 
 ## How Language Models Work
 
@@ -29,38 +58,23 @@ Models generate text by predicting the most likely next token, then the next, an
 
 Models learn patterns from training data. They have a **knowledge cutoff**—a date after which they have no information. They also may have varying depth of knowledge about different topics based on what was in their training data.
 
-## Mental Models for AI Interaction
+## Understanding AI Behavior
 
-### The Knowledgeable but Literal Assistant
+### How AI Interprets Instructions
 
-AI is like a very knowledgeable assistant who takes instructions literally. It:
+AI processes instructions literally and doesn't infer intent. It has broad knowledge but lacks specific context about your situation. It won't ask clarifying questions or push back on flawed requests unless you explicitly prompt it to review critically.
 
-- Has broad knowledge but may lack specific context about your situation
-- Does exactly what you ask (which may not be what you meant)
-- Doesn't ask clarifying questions unless prompted to
-- Won't push back on bad ideas unless you ask it to review critically
+This means you need to be explicit about requirements, constraints, and expectations. What seems obvious to you isn't obvious to AI.
 
-### The Pattern Matcher
+### Pattern Recognition Strengths and Limits
 
-AI excels at recognizing and applying patterns. It works well when:
+AI excels at recognizing and applying patterns from its training data. It works well when problems resemble common patterns, you provide clear examples, and tasks follow established conventions.
 
-- The problem resembles patterns in its training data
-- You provide clear examples of what you want
-- The task has well-established conventions
+AI struggles with truly novel problems, ambiguous requirements, and reasoning about information not in the provided context. If your problem is unique or requires specialized domain knowledge, expect to provide more guidance.
 
-It struggles when:
+### Confidence vs. Accuracy
 
-- The problem is truly novel
-- Requirements are ambiguous
-- The solution requires reasoning about things not in the context
-
-### The Confident Generator
-
-AI generates text confidently regardless of accuracy. It will:
-
-- Produce plausible-sounding but incorrect information
-- Make up details when it doesn't have information
-- Not distinguish between high-confidence and low-confidence outputs
+AI generates responses confidently regardless of accuracy. It produces plausible-sounding but potentially incorrect information, fabricates details when it doesn't have real information, and doesn't signal uncertainty in its outputs.
 
 !!! warning "Verification is Essential"
     Never assume AI output is correct. Always verify, especially for:
@@ -84,55 +98,20 @@ AI generates text confidently regardless of accuracy. It will:
 
 ## Context Management
 
-One of the most important skills in working with AI is managing context effectively.
+One of the most important skills in working with AI is managing context effectively. Context includes the relevant code, requirements for what you're trying to achieve, constraints like style guides or limitations, and examples showing sample inputs/outputs or similar code.
 
-### What Goes in Context
+Quality matters more than quantity—10 relevant lines beat 1000 tangential ones. Be explicit rather than implicit; state assumptions since AI can't read your mind. Organize information clearly rather than scattering details throughout your prompt. Ensure context reflects the current state of your code, not outdated versions.
 
-- **Relevant code**: Files, functions, or snippets the AI needs to understand
-- **Requirements**: What you're trying to achieve
-- **Constraints**: Limitations, style guides, or requirements
-- **Examples**: Sample inputs/outputs or similar code
-
-### Context Quality Principles
-
-1. **Relevance over volume**: 10 relevant lines beat 1000 tangential ones
-2. **Explicit over implicit**: State assumptions; the AI can't read your mind
-3. **Structured over scattered**: Organize information clearly
-4. **Current over stale**: Ensure context reflects the actual state of your code
-
-### Context Pollution
-
-Too much irrelevant context can degrade output quality. Signs of context pollution:
-
-- AI references code that isn't relevant
-- Outputs mix patterns from different parts of the codebase
-- Responses become less focused
-
-## The Feedback Loop
-
-Effective AI use is iterative:
-
-```
-┌─────────────────────────────────────────────┐
-│                                             │
-│   Prompt ──► Response ──► Evaluate ──┐      │
-│      ▲                               │      │
-│      └───────── Refine ◄──────────────┘      │
-│                                             │
-└─────────────────────────────────────────────┘
-```
-
-1. **Prompt**: Provide context and instructions
-2. **Response**: AI generates output
-3. **Evaluate**: Assess quality and correctness
-4. **Refine**: Adjust your prompt or provide feedback
-
-The skill is in making this loop efficient—getting good results with fewer iterations.
+Too much irrelevant context degrades output quality. Watch for signs of context pollution: AI references irrelevant code, mixes patterns from different parts of the codebase, or produces unfocused responses. When this happens, reduce and refine your context.
 
 ## Key Takeaways
 
-- AI systems are probabilistic pattern matchers, not reasoning engines
-- Context quality determines output quality
-- Verification is always necessary
-- Working with AI is an iterative, refinable skill
-- Understanding the underlying mechanics helps you debug and improve interactions
+AI systems are probabilistic pattern matchers, not reasoning engines. Context quality determines output quality, so focus on providing relevant, well-structured information. Verification is always necessary—never assume outputs are correct. Working with AI is an iterative, refinable skill that improves with practice. Understanding the underlying mechanics helps you debug issues and improve your interactions over time.
+
+## Next Steps
+
+Now that you understand how AI works, choose your path:
+
+- **Using AI coding tools daily?** Move to [AI-Assisted Development](../ai-assisted-development/index.md) for practical prompting patterns
+- **Evaluating AI tools?** Check [Evaluating Tools](../ai-assisted-development/evaluating-tools.md) for selection criteria
+- **Building AI features?** Review [Security](../security/index.md) first, then explore [Agents](../agents/index.md)
