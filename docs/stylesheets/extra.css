@@ -46,6 +46,9 @@
 	margin-left: 2rem;
 	margin-right: 2rem;
     }
+    .md-nav__title {
+        display: none;
+    }
 }
 
 /* Responsive: reduce padding on mobile/tablet (below 960px) */
@@ -85,6 +88,15 @@
     --md-primary-fg-color--dark: var(--color-primary-dark);
     --md-accent-fg-color: var(--color-accent);
     --md-accent-fg-color--transparent: rgba(0, 186, 184, 0.1);
+    --md-default-bg-color: #08111e;
+    --md-default-fg-color: #e8e8e8;
+}
+
+/* Radial gradient background for dark mode */
+[data-md-color-scheme="slate"] .md-main,
+[data-md-color-scheme="slate"] body {
+    background: radial-gradient(ellipse at top left, #0f2230 0%, #08111e 50%, #08111e 100%);
+    background-attachment: fixed;
 }
 
 /* Apply brand colors to Material theme (light mode) */
@@ -134,30 +146,41 @@
 }
 
 [data-md-color-scheme="slate"] .md-typeset code {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #050c16;
     color: #e8e8e8;
 }
 
 /* Code blocks - ensure readable backgrounds */
 .md-typeset pre > code {
     background-color: transparent;
+    border-radius: 8px;
 }
 
 .md-typeset .highlight,
 .md-typeset .highlighttable {
     background-color: #f5f5f5;
+    border-radius: 8px;
 }
 
 [data-md-color-scheme="slate"] .md-typeset .highlight,
 [data-md-color-scheme="slate"] .md-typeset .highlighttable {
-    background-color: #0d1117;
+    background-color: #050c16;
+    border-radius: 8px;
 }
 
 /* Code block container */
 .md-typeset pre {
     background-color: #f5f5f5;
+    border-radius: 8px;
 }
 
 [data-md-color-scheme="slate"] .md-typeset pre {
-    background-color: #0d1117;
+    background-color: #050c16;
+    border-radius: 8px;
 }
+
+/* Code block wrapper - rounded corners */
+.md-typeset code {
+    border-radius: 8px;
+}
+
