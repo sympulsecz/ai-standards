@@ -14,5 +14,8 @@ presentation/*.toc
 presentation/*.vrb
 presentation/missfont.log
 
+# Other
+presentation/demo/
+
 # Optional: uncomment to ignore the compiled PDF
 # presentation/*.pdf
