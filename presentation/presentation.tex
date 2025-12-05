@@ -504,17 +504,92 @@ Question: What could cause this?
     \vspace{1em}
 
     \begin{center}
-        \footnotesize
-        \begin{tabular}{ll}
-            \toprule
-            \textbf{USE FOR}    & \textbf{AVOID FOR}     \\
-            \midrule
-            Variable inputs     & Deterministic ops      \\
-            Pattern recognition & High-stakes decisions  \\
-            Natural language    & Guaranteed correctness \\
-            \bottomrule
-        \end{tabular}
+        \large
+        AI makes humans more effective---\\
+        it doesn't make humans unnecessary
     \end{center}
+
+    \vspace{1em}
+
+    \begin{alertblock}{Key Insight}
+        The goal is \textbf{amplification}, not substitution
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Why Augment, Not Replace?}
+
+    \textbf{AI is probabilistic, not deterministic}
+    \begin{itemize}
+        \item Same input can produce different outputs
+        \item Confidence is not the same as correctness
+        \item "Plausible" doesn't mean "right"
+    \end{itemize}
+
+    \vspace{1em}
+
+    \textbf{AI lacks your context}
+    \begin{itemize}
+        \item Business requirements, team conventions
+        \item Historical decisions and their rationale
+        \item Organizational constraints and politics
+    \end{itemize}
+
+    \vspace{1em}
+
+    \textbf{Accountability remains with humans}
+    \begin{itemize}
+        \item You sign off on the code, not the AI
+        \item Debugging AI mistakes is still your job
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{The Augmentation Spectrum}
+
+    \begin{center}
+        \begin{tikzpicture}[thick]
+            % Draw the spectrum bar
+            \fill[left color=green!50, right color=red!50] (0,0) rectangle (10,0.5);
+
+            % Labels above
+            \node[above] at (0,0.5) {\footnotesize\textbf{More AI}};
+            \node[above] at (10,0.5) {\footnotesize\textbf{More Human}};
+
+            % Examples below
+            \node[below, text width=2cm, align=center, font=\tiny] at (1,0) {Autocomplete\\Boilerplate};
+            \node[below, text width=2cm, align=center, font=\tiny] at (3.5,0) {Code review\\suggestions};
+            \node[below, text width=2cm, align=center, font=\tiny] at (6.5,0) {Architecture\\decisions};
+            \node[below, text width=2cm, align=center, font=\tiny] at (9,0) {Business logic\\Security critical};
+        \end{tikzpicture}
+    \end{center}
+
+    \vspace{1.5em}
+
+    \textbf{Principle:} The higher the stakes, the more human judgment required
+
+    \vspace{0.5em}
+
+    \textbf{Rule of thumb:} Would you blindly accept this from a junior developer?
+\end{frame}
+
+\begin{frame}{Practical Examples}
+
+    \textbf{\textcolor{checkcolor}{✓} Augmentation done right:}
+    \begin{itemize}
+        \item AI drafts PR description $\rightarrow$ Human reviews and edits
+        \item AI suggests code improvements $\rightarrow$ Human accepts/rejects each
+        \item AI summarizes long thread $\rightarrow$ Human verifies accuracy
+        \item AI generates test cases $\rightarrow$ Human validates coverage
+    \end{itemize}
+
+    \vspace{1em}
+
+    \textbf{\textcolor{crosscolor}{✗} Replacement gone wrong:}
+    \begin{itemize}
+        \item AI auto-merges PRs without review
+        \item AI decides deployment timing
+        \item AI chooses database schema changes
+        \item AI handles customer escalations alone
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Three Essential Patterns}
