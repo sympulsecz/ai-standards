@@ -56,7 +56,9 @@ Models generate text by predicting the most likely next token, then the next, an
 
 ### Training and Knowledge Cutoff
 
-Models learn patterns from training data. They have a **knowledge cutoff**—a date after which they have no information. They also may have varying depth of knowledge about different topics based on what was in their training data.
+Models learn patterns from training data. They have a **knowledge cutoff**—a date after which they have no information from training. They also may have varying depth of knowledge about different topics based on what was in their training data.
+
+Many AI coding tools address this through internet access or retrieval systems that provide current information. However, the model's core knowledge of concepts, patterns, and techniques comes from its training data.
 
 ## Understanding AI Behavior
 

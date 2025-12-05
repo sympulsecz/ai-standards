@@ -1,9 +1,9 @@
 # MCP (Model Context Protocol)
 
-!!! danger "TODO: Add Screenshot"
-    Add a screenshot showing how to configure/add a custom MCP server in an existing coding assistant (Cursor, Claude Code, etc.)
-
 Model Context Protocol (MCP) is an open standard for extending agents with custom capabilities. Whether you're using agentic coding tools like Claude Code and Cursor, or building your own agent systems, MCP provides a standardized way to connect agents to databases, APIs, internal tools, and data sources.
+
+![Agent using a PostgreSQL MCP server to list database schemas](../images/mcp-call-simple.gif)
+*Agent using a PostgreSQL MCP server to query database schemas*
 
 ## Why MCP Matters
 
@@ -85,6 +85,10 @@ Configuration varies by AI tool, but generally involves specifying server locati
   }
 }
 ```
+
+Once configured, you can control which tools from MCP servers are available to your agent:
+
+![Toggling individual tools on and off within an MCP server](../images/mcp-tool-toggle.gif)
 
 ### Security Considerations
 

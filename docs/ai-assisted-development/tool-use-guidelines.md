@@ -38,15 +38,17 @@ When using AI for code changes, follow safety practices to prevent introducing n
 
 ## Key Limitations
 
-**AI cannot access running state.** AI sees code, not runtime values, variable contents, or memory state. Provide runtime information explicitly: "The database query returns empty results but there are 1000 rows that match."
+AI has fundamental constraints that cannot be fully mitigated. Understanding these helps set appropriate expectations.
 
-**AI guesses without execution.** AI predicts likely issues based on patterns but doesn't actually run code. Verify AI predictions by running code.
+**No runtime access.** AI sees code, not runtime values, variable contents, memory state, or database contents. Provide runtime information explicitly: "The database query returns empty results but there are 1000 rows that match."
 
-**AI may miss environment issues.** Configuration problems, environment variables, network issues, and deployment-specific bugs require explicit context.
+**Hallucination.** AI generates plausible but potentially false information confidently, without signaling uncertainty. Always verify outputs, especially for API usage, security code, and business logic.
 
-**AI focuses on code shown.** Bugs in other files, database schema issues, and infrastructure problems won't be detected if not included in context.
+**Cannot infer implicit requirements.** AI doesn't know your business rules, domain constraints, or organizational context unless you state them. Be explicit about requirements, edge cases, and constraints.
 
-**AI may introduce subtle changes.** When refactoring or fixing code, AI sometimes adds error handling that didn't exist before, changes validation logic, or alters edge case behavior. Always compare before and after behavior.
+**Prediction without execution.** AI predicts likely issues based on patterns but doesn't actually run code or tests. Verify AI predictions by running code.
+
+**May introduce subtle changes.** When refactoring or fixing code, AI sometimes adds error handling that didn't exist before, changes validation logic, or alters edge case behavior. Always compare before and after behavior, not just syntax.
 
 ## Team Practices
 
