@@ -488,57 +488,6 @@ Question: What could cause this?
     Structures information and reduces hallucination
 \end{frame}
 
-\begin{frame}{Debugging Techniques}
-
-    \begin{center}
-        \footnotesize
-        \begin{tabular}{ll}
-            \toprule
-            \textbf{Technique}   & \textbf{When to Use}   \\
-            \midrule
-            Hypothesis generator & Systematic elimination \\
-            Rubber duck++        & Validate your theory   \\
-            Trace explainer      & Understand execution   \\
-            Fix validator        & Verify your fix        \\
-            Comparative          & Find differences       \\
-            \bottomrule
-        \end{tabular}
-    \end{center}
-
-    \vspace{1em}
-
-    Example: "Why works: [code A], Why doesn't: [code B]"
-\end{frame}
-
-\begin{frame}{Debugging Workflow}
-
-    \begin{columns}[T]
-        \column{0.32\textwidth}
-        \textbf{BEFORE}
-        \begin{itemize}
-            \item[\checkmark] Exact errors
-            \item[\checkmark] Repro steps
-            \item[\checkmark] Relevant code
-        \end{itemize}
-
-        \column{0.32\textwidth}
-        \textbf{DURING}
-        \begin{itemize}
-            \item Hypotheses
-            \item Most likely first
-            \item Iterate
-        \end{itemize}
-
-        \column{0.32\textwidth}
-        \textbf{VERIFY}
-        \begin{itemize}
-            \item Understand why
-            \item Side effects?
-            \item Test edges
-        \end{itemize}
-    \end{columns}
-\end{frame}
-
 % ===================================================================
 % AUTOMATION SECTION
 % ===================================================================
