@@ -45,6 +45,21 @@ mkdocs build
 
 Output goes to the `site/` directory.
 
+## Tool Matrix Snapshot Sync
+
+Before running the sync command, clone `sympulsecz/tool-matrix` so the artifact source exists at `../tool-matrix` relative to this repo:
+
+```bash
+# From the parent directory where both repos will live
+git clone https://github.com/sympulsecz/tool-matrix.git
+```
+
+Then, from the `ai-standards` repository root, refresh the snapshot page:
+
+```bash
+python scripts/sync_tool_matrix.py --source ../tool-matrix/artifacts/tool-matrix.md --output docs/ai-assisted-development/tool-matrix.md --mode compact
+```
+
 ## Deployment
 
 The documentation automatically deploys to GitHub Pages when changes are pushed to `main` or `master`.

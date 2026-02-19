@@ -67,6 +67,7 @@ nav:
     - "Tool Use: Guidelines": ai-assisted-development/tool-use-guidelines.md
     - "Tool Use: Fundamentals": ai-assisted-development/tool-use-fundamentals.md
     - "Tool Use: Workflows": ai-assisted-development/tool-use-workflows.md
+    - Tool Matrix Snapshot: ai-assisted-development/tool-matrix.md
     - Instruction Files: ai-assisted-development/instruction-files.md
   - Agents:
     - Overview: agents/index.md
