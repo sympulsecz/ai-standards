@@ -126,6 +126,6 @@ Evaluate tools against your specific work, not general benchmarks. Test with rep
 
 When in doubt, start with the most restrictive tool that meets baseline requirements, then expand to more capable options as comfort and trust increase. It's easier to adopt a more powerful tool later than to deal with security incidents from tools adopted too hastily.
 
-For a periodically refreshed market snapshot generated from the tool-matrix project, see [Tool Matrix Snapshot](tool-matrix.md).
+For a periodically refreshed market snapshot generated from the tool-matrix project, see [Tool Matrix Snapshot](ai-tool-eval-matrix.md).
 
 For guidance on configuring tools to match your project conventions, see [Instruction Files](instruction-files.md).

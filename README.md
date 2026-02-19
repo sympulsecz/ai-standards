@@ -47,17 +47,17 @@ Output goes to the `site/` directory.
 
 ## Tool Matrix Snapshot Sync
 
-Before running the sync command, clone `sympulsecz/tool-matrix` so the artifact source exists at `../tool-matrix` relative to this repo:
+Before running the sync command, clone `sympulsecz/ai-tool-eval-matrix` so the artifact source exists at `../ai-tool-eval-matrix` relative to this repo:
 
 ```bash
 # From the parent directory where both repos will live
-git clone https://github.com/sympulsecz/tool-matrix.git
+git clone https://github.com/sympulsecz/ai-tool-eval-matrix.git
 ```
 
 Then, from the `ai-standards` repository root, refresh the snapshot page:
 
 ```bash
-python scripts/sync_tool_matrix.py --source ../tool-matrix/artifacts/tool-matrix.md --output docs/ai-assisted-development/tool-matrix.md --mode compact
+python scripts/sync_tool_matrix.py --source ../ai-tool-eval-matrix/artifacts/tool-matrix.md --output docs/ai-assisted-development/ai-tool-eval-matrix.md --mode compact
 ```
 
 ## Deployment
