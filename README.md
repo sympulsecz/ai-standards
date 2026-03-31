@@ -57,7 +57,7 @@ git clone https://github.com/sympulsecz/ai-tool-eval-matrix.git
 Then, from the `ai-standards` repository root, refresh the snapshot page:
 
 ```bash
-python scripts/sync_tool_matrix.py --source ../ai-tool-eval-matrix/artifacts/tool-matrix.md --output docs/ai-assisted-development/ai-tool-eval-matrix.md --mode compact
+python scripts/sync_tool_matrix.py --source ../ai-tools-ai-matrix/artifacts/tool-matrix.md --output docs/ai-assisted-development/ai-tool-eval-matrix.md --mode compact
 ```
 
 ## Deployment

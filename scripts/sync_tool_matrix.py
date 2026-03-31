@@ -239,7 +239,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--source",
         type=Path,
-        default=Path("../ai-tool-eval-matrix/artifacts/tool-matrix.md"),
+        default=Path("../ai-tools-ai-matrix/artifacts/tool-matrix.md"),
         help="Path to tool-matrix markdown artifact",
     )
     parser.add_argument(

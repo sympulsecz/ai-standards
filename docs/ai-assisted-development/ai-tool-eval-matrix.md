@@ -7,7 +7,7 @@ This page provides a concise snapshot of AI tool capabilities by category, so te
 - Snapshot covers **14 tools** across **10 categories**.
 - Scores range from **0 (minimal)** to **100 (best-in-class)**; **N/A** means the tool does not target that category.
 - **Avg** is the average of numeric category scores, excluding N/A.
-- Generated: `2026-02-12T11:30:00Z`
+- Generated: `2026-03-31T12:00:00Z`
 
 ## Category Legend
 
